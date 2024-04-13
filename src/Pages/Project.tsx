@@ -8,7 +8,7 @@ type projectPropTypes = {
     name: string,
     thumbnail_url: string,
     description: string,
-    accordion_data: {question: string, answer: string}[],
+    accordion_data: {question: string, answer: JSX.Element | string}[],
     github_url: string,
     live_url: string
 }
@@ -18,7 +18,7 @@ export default function ProjectPage ({ name, thumbnail_url, description, accordi
     return(
         <>
         <div className='section project'>
-            <h3 className='text-center text-4xl pb-8'>{name}</h3>
+            <h3 className='text-center text-3xl pb-8'>{name}</h3>
             <img className="mx-auto" src={thumbnail_url} />
             <p className=' px-4 py-5 text-center'>{description}</p>
             <div className='px-4 pb-5'>

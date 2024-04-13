@@ -5,7 +5,7 @@ import { IoIosArrowDown } from "react-icons/io";
 
 type accordionItemTypes = {
   question: string,
-  answer: string,
+  answer: HTMLElement | string,
   isOpen: boolean,
   onClick: MouseEventHandler
 }
@@ -31,7 +31,9 @@ const AccordionItem = ({ question, answer, isOpen, onClick } :accordionItemTypes
             : { height: "0px" }
         }
       >
-        <p className="answer-content">{answer}</p>
+        { typeof answer === 'string' ? <p className="answer-content text-md">{answer}</p> : <div className="answer-content">{answer}</div> }
+        {/* { Array.isArray(answer) && <ul className="answer-content answer-list text-md">{ answer.map((a) => <li>{a}</li>) }</ul> } */}
+        
       </div>
     </div>
   );

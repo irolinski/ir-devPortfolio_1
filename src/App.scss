@@ -27,12 +27,14 @@ $whitesmoke: whitesmoke;
 .section{
     position: relative;
     min-height: 100vh;
-    padding: 4rem;
+    height: auto;
+    padding: 4rem 2rem;
+    overflow: hidden;
 
 }
 
 .section-header{
-    font-size: 3.75rem;
+    font-size: 3.25rem;
     line-height: 1;
     font-weight: 700;
 }
@@ -106,7 +108,7 @@ $whitesmoke: whitesmoke;
                 align-items: center;
                 justify-content: space-between;
                 font-weight: 500;
-                font-size: 20px;
+                font-size: 1.2rem;
                 background: transparent;
                 border: none;
                 cursor: pointer;
@@ -130,8 +132,16 @@ $whitesmoke: whitesmoke;
 
             .answer-content {
                 padding: 1rem 0;
-                font-size: 20px;
+                font-size: 1rempx;
                 font-style: italic;
+
+                .answer-list{
+                    list-style: inside;
+
+                    & > li{
+                        padding-bottom: 0.5rem;
+                    }
+                }
               }
         }
 }
