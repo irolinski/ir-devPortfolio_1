@@ -1,10 +1,25 @@
+// tailwind init
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+// color variables
 $grey: #b5b1b1f3;
 $trans-white: #ebe9e9bb;
 $whitesmoke: whitesmoke;
+
+//media query breakpoint variables - in accordance w/ tailwind.config
+
+$xxs: 390px;
+$xs: 425px;
+$sm: 640px;
+$md: 768px;
+$lg: 1024px;
+$xl: 1280px;
+$xxl: 1536px; // '2xl' in tailwind
+
+
+
 
 .bg-grey{
     background-color: #D0CDCD
@@ -15,28 +30,39 @@ $whitesmoke: whitesmoke;
 }
 
 .section{
-    background-color: $whitesmoke;
-    &:nth-child(2n){
-        background-color: $grey;
-    }
-}
-
-
-//text elements
-
-.section{
     position: relative;
     min-height: 100vh;
     height: auto;
     padding: 4rem 2rem;
     overflow: hidden;
 
+    background-color: $whitesmoke;
+    &:nth-child(2n){
+        background-color: $grey;
+    }
+
+
 }
 
+
+//text elements
+
 .section-header{
-    font-size: 3.25rem;
+    font-size: 3rem;
     line-height: 1;
     font-weight: 700;
+
+    @media (min-width: $sm){
+        font-size: 3.5rem;
+    }
+
+    @media(min-width: $md){
+        font-size: 3.75rem;
+    }
+
+    @media(min-width: $lg){
+        font-size: 5rem;
+    }
 }
 
 
@@ -58,15 +84,22 @@ $whitesmoke: whitesmoke;
     }
 }
 
+//about me page
+
+
+
 // project page
 
 .project{
     .project-links{
 
-
         svg{
             width: 2em;
             height: auto;
+
+            @media(min-width: $md){
+                width:3em;
+            }
         }
     }
 }
