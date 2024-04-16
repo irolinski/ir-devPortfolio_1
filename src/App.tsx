@@ -12,8 +12,8 @@ import AllProjects from './Pages/AllProjects.tsx'
 export default function App() {
   return (
     <>
-      <div className=''>
         <LandingPage />
+        <div className='all'>
         <AboutPage />
 
         <AllProjects />

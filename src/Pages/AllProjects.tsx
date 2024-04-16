@@ -40,8 +40,8 @@ const SprawdźFodmap_accordionData = [
 
 export default function AllProjects () {
     return(
-        <>
-            <div className='section project bg-white'>
+        <div className="projects-wrapper">
+            <div className='section project bg-white lg:hidden pt-32'>
                 <h2 className='section-header'>Recent projects.</h2>
             </div>
 
@@ -72,6 +72,6 @@ export default function AllProjects () {
             live_url="https://sprawdzfodmap.pl/" 
             />
 
-        </>
+        </ div>
     )
 }

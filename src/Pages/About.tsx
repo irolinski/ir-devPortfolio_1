@@ -2,7 +2,7 @@
 
 export default function AboutPage (){
     return(
-        <div className='section about bg-grey px-16'>
+        <div className='section about bg-grey px-16 lg:hidden'>
           <h2 className='section-header text-center'>About me. </h2>
           <div className='px-4 py-8 text-2xl flex flex-col items-center sm:text-3xl md:text-4xl lg:text-5xl'>
 

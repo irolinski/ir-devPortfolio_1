@@ -8,49 +8,80 @@ $grey: #b5b1b1f3;
 $trans-white: #ebe9e9bb;
 $whitesmoke: whitesmoke;
 
+$cream: #F9F7F7;
+$sky: #DBE2EF;
+$sea: #3F72AF;
+$navy: #17222f;
+
+#tsparticles{ 
+    background: linear-gradient(rgba(219,226,239,0.10176991150442483) 0%, rgba(23,34,47,1) 35%, rgba(2,0,36,1) 100%);
+}
+.text-cream{
+    color: $cream;
+}
+
+.text-sky{
+    color: $sky
+}
+
+.text-sea{
+    color: $sea;
+}
+
+.text-navy{
+    color: $navy;
+}
 //media query breakpoint variables - in accordance w/ tailwind.config
 
 $xxs: 390px;
 $xs: 425px;
 $sm: 640px;
 $md: 768px;
-$lg: 1024px;
+$lg: 1023px;
 $xl: 1280px;
 $xxl: 1536px; // '2xl' in tailwind
 
 
 
 
-.bg-grey{
-    background-color: #D0CDCD
-}
+// .bg-grey{
+//     background-color: #D0CDCD
+// }
 
-.bg-white{
-    background-color: whitesmoke;
-}
+// .bg-white{
+//     background-color: whitesmoke;
+// }
+
 
 .section{
     position: relative;
-    min-height: 100vh;
-    height: auto;
-    padding: 4rem 2rem;
-    overflow: hidden;
-
-    background-color: $whitesmoke;
-    &:nth-child(2n){
-        background-color: $grey;
+    
+    @media (max-width: $lg){
+        min-height: 100vh;
+        height: auto;
+        padding: 2rem 2rem;
+        overflow: hidden;
     }
-
+    // background-color: rgba(245, 222, 179, 0.134) ;
+    // &:nth-child(2n){
+    //     background-color: rgba(245, 222, 179, 0.161);
+    // }
 
 }
+
 
 
 //text elements
 
 .section-header{
-    font-size: 3rem;
+    font-size: 2.5rem;
     line-height: 1;
     font-weight: 700;
+    color: $navy;
+    
+    @media(min-width: $xxs){
+        font-size: 3rem;
+    }
 
     @media (min-width: $sm){
         font-size: 3.5rem;
@@ -69,7 +100,6 @@ $xxl: 1536px; // '2xl' in tailwind
 // landing page
 
 .landing-page{
-
 
     h5{
         color: rgb(255, 255, 255);
@@ -90,9 +120,38 @@ $xxl: 1536px; // '2xl' in tailwind
 
 // project page
 
-.project{
-    .project-links{
+.projects-wrapper > div{
 
+    background-color: rgba(0, 0, 0, 0.236);
+    &:nth-child(2n){
+        background-color: rgba(84, 84, 84, 0.161);
+    }
+
+    @media (min-width: $lg) {
+        padding: 5em 5em 2.5em 5em;
+    }
+
+}
+
+.allprojects-header{
+
+    display: none !important;
+    position: relative;
+    min-height: 20vh;
+    height: auto;
+    padding: 4rem 2rem;
+    overflow: hidden;
+
+
+}
+
+.project{
+    @media (min-width: $lg){
+        scale: 0.7
+    }
+
+  
+    .project-links{
         svg{
             width: 2em;
             height: auto;
@@ -107,11 +166,10 @@ $xxl: 1536px; // '2xl' in tailwind
 // contact page
 
 .contact{
+    background-color: rgba(0, 0, 0, 0.236);
     .icon{
         border: 2px solid black;
         border-radius: 40px;
-
-
     }
 }
 
