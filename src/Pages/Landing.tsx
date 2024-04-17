@@ -7,27 +7,36 @@ import ParticlesComponent from "../Components/Particles_Stars.jsx";
 export default function LandingPage() {
   return (
     <>
-      <div className=" relative flex min-h-[100vh] w-[100vw] p-16  md:hidden">
+      <a className="relative flex min-h-[100vh] w-[100vw] p-16 md:hidden" href="#landing-page-main"> 
         <Lottie
-          className="relative min-w-[100%] -translate-y-6"
+          className="relative min-w-[100%] -translate-y-6 hover:cursor-s-resize"
           animationData={windowAnimation}
           loop={true}
         />
-      </div>
+      </a>
+
       <div className="landing-page h-auto min-h-[100vh] px-16 pt-8 md:justify-center lg:ml-12 xl:ml-36 2xl:ml-24">
         <div className="relative w-[100%] xs:pt-12 lg:mt-24 xl:mt-32">
           <div className="float-right mr-8 hidden lg:mr-24 lg:flex lg:flex-col lg:pl-20 xl:mr-52 2xl:ml-16">
-            <a className="bubble-link github-link" href="github.com">
+            <a
+              className="bubble-link github-link"
+              href="https://github.com/szczek?tab=repositories"
+              target="_blank"
+            >
               <img className="github-icon" src="/icons/github.svg" />
             </a>
-            <a className="bubble-link contact-link" href="">
+            <a className="bubble-link contact-link" href="#contact-section">
               <img className="contact-icon" src="/icons/contact.svg" />
             </a>
-            <a className="bubble-link instagram-link" href="">
+            <a
+              className="bubble-link instagram-link"
+              href="https://www.instagram.com/ign_cy"
+              target="_blank"
+            >
               <img className="instagram-icon" src="/icons/instagram.svg" />
             </a>
           </div>
-          <div className="xl:mr-8">
+          <div className="xl:mr-8" id="landing-page-main">
             <h1 className="text-4xl font-bold xxs:text-5xl sm:text-6xl lg:ml-12 lg:-translate-y-16 lg:text-6xl">
               Hi! My name is Ignacy. <br />
             </h1>
@@ -41,18 +50,26 @@ export default function LandingPage() {
         </div>
         <div className=" bottom-0 mx-auto mt-[33%] flex flex min-h-[50%] items-center items-center justify-center sm:mt-[15%] md:mt-[7%]">
           <div className="section-menu xxxs:mt-12 xxxs:pt-8 relative flex xs:mb-12 xs:mt-0 xs:pb-12 xs:pt-0 md:justify-center md:pt-[25%] lg:hidden">
-            <button className="menu-button m-2 p-2 sm:p-3 sm:text-xl">
+            <a
+              className="menu-button m-2 p-2 sm:p-3 sm:text-xl"
+              href="#about-section"
+            >
               About
-            </button>
-            <button className="menu-button m-2 p-2 sm:p-3 sm:text-xl">
+            </a>
+            <a
+              className="menu-button m-2 p-2 sm:p-3 sm:text-xl"
+              href="#projects-section"
+            >
               Projects
-            </button>
-            <button className="menu-button m-2 p-2 sm:p-3 sm:text-xl">
+            </a>
+            <a
+              className="menu-button m-2 p-2 sm:p-3 sm:text-xl"
+              href="#contact-section"
+            >
               Contact
-            </button>
+            </a>
           </div>
           <div className="m-8 hidden lg:block ">
-            {/* <h4 className="text-2xl font-bold">About me</h4> */}
             <p className="about relative m-2 -translate-y-20 p-4 text-left text-xl">
               As a currently <b>freelancing full-stack developer</b>, I
               specialize in developing small-scale applications. I find my

@@ -128,7 +128,10 @@ const SprawdźFodmap_accordionData = [
 
 export default function AllProjects() {
   return (
-    <div className="projects-wrapper section -mt-48 sm:-mt-36 lg:mt-0">
+    <div
+      className="projects-wrapper section -mt-48 sm:-mt-36 lg:mt-0"
+      id="projects-section"
+    >
       {/* <div className=" bg-white relative text-center xs:min-h-[10vh] lg:pt-32"> */}
       <h2 className="section-header relative pt-12 text-center lg:pt-32">
         Recent projects.

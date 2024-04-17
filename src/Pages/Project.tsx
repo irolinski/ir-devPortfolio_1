@@ -20,7 +20,7 @@ export default function ProjectPage({
   live_url,
 }: projectPropTypes) {
   return (
-    <div className="project-main section scale-1/2 relative pt-12 px-2 md:px-32">
+    <div className="project-main section scale-1/2 relative px-2 pt-12 md:px-32">
       <div className="hidden lg:block">
         <h3 className="text-center text-3xl xxs:text-4xl sm:text-4xl">
           {name}
@@ -45,12 +45,12 @@ export default function ProjectPage({
             <Accordion data={accordion_data} />
           </div>
           <div className="my-[12.5%] flex flex-col items-center lg:my-4">
-            <div className="project-links flex justify-center -mt-2 xs:mt-0 xxs:pt-8 lg:pt-0">
-              <a className="m-4" href={github_url}>
+            <div className="project-links -mt-2 flex justify-center xxs:pt-8 xs:mt-0 lg:pt-0">
+              <a className="project-icon m-4" href={github_url} target="_blank">
                 {" "}
                 <FaGithub />{" "}
               </a>
-              <a className="m-4" href={live_url}>
+              <a className="project-icon m-4" href={live_url} target="_blank">
                 {" "}
                 <FaDesktop />{" "}
               </a>

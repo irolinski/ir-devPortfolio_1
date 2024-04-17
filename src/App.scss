@@ -31,10 +31,6 @@ $gradient4: #61687367;
   color: $navy;
 }
 
-* {
-  color: $navy;
-}
-
 //media query breakpoint variables - in accordance w/ tailwind.config
 
 $xxs: 390px;
@@ -44,6 +40,13 @@ $md: 768px;
 $lg: 1023px;
 $xl: 1280px;
 $xxl: 1536px; // '2xl' in tailwind
+
+// all
+
+* {
+  color: $navy;
+  scroll-behavior: smooth;
+}
 
 // containers
 
@@ -189,6 +192,14 @@ $xxl: 1536px; // '2xl' in tailwind
   }
 
   .project-links {
+    .project-icon {
+      padding: 1em;
+      border-radius: 60px;
+      &:hover {
+        background-color: #f9f7f751;
+      }
+    }
+
     svg {
       width: 2em;
       height: auto;

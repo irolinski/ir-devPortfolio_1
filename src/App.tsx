@@ -6,9 +6,6 @@ import AboutPage from "./Pages/About.js";
 import LandingPage from "./Pages/Landing.js";
 import ContactPage from "./Pages/Contact.js";
 import AllProjects from "./Pages/AllProjects.tsx";
-import Lottie from "lottie-react";
-
-import windowAnimation from "../public/lotties/window.json";
 
 export default function App() {
   return (

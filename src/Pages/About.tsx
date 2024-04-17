@@ -3,7 +3,7 @@ import layingAnimation from "../../public/lotties/looking.json";
 
 export default function AboutPage() {
   return (
-    <div className="section about-me bg-grey xxxs:px-16 min-h-[100vh] px-2 sm:px-32 md:pb-16 lg:hidden">
+    <div className="section about-me bg-grey xxxs:px-16 min-h-[100vh] px-2 sm:px-32 md:pb-16 lg:hidden" id="about-section">
       <h2 className="section-header text-center">About me. </h2>
       <div className="flex flex-col items-center px-4 text-xl sm:text-3xl md:text-4xl lg:text-5xl">
         <div className="float-left py-[20%] pb-8 text-left xs:py-[15%] md:py-[7.5%]">
