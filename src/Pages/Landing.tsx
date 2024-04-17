@@ -7,20 +7,40 @@ import ParticlesComponent from "../Components/Particles_Stars.jsx";
 export default function LandingPage() {
   return (
     <>
-      <div className="landing-page h-auto min-h-[100vh] px-16 md:justify-center">
+      <div className=" relative flex min-h-[100vh] w-[100vw] p-16  md:hidden">
+        <Lottie
+          className="relative min-w-[100%] -translate-y-6"
+          animationData={windowAnimation}
+          loop={true}
+        />
+      </div>
+      <div className="landing-page h-auto min-h-[100vh] px-16 pt-8 md:justify-center lg:ml-12 xl:ml-36 2xl:ml-24">
         <div className="relative w-[100%] xs:pt-12 lg:mt-24 xl:mt-32">
-          <h1 className="text-navy text-4xl font-bold xxs:text-5xl sm:text-6xl lg:-translate-y-16 lg:text-6xl">
-            Hi! My name is Ignacy. <br />
-          </h1>
-          <h2 className="text-sea mt-16 mt-8 text-3xl font-bold xxs:text-5xl sm:text-6xl lg:max-w-[70vw] lg:-translate-y-16 lg:text-7xl">
-            I make small-scale web-apps tailored for any client's needs.{" "}
-          </h2>
-          <h5 className="pt-4 xxs:text-xl sm:text-2xl md:text-3xl lg:hidden">
-            (frontend, backend, ui)
-          </h5>
+          <div className="float-right mr-8 hidden lg:mr-24 lg:flex lg:flex-col lg:pl-20 xl:mr-52 2xl:ml-16">
+            <a className="bubble-link github-link" href="github.com">
+              <img className="github-icon" src="/icons/github.svg" />
+            </a>
+            <a className="bubble-link contact-link" href="">
+              <img className="contact-icon" src="/icons/contact.svg" />
+            </a>
+            <a className="bubble-link instagram-link" href="">
+              <img className="instagram-icon" src="/icons/instagram.svg" />
+            </a>
+          </div>
+          <div className="xl:mr-8">
+            <h1 className="text-4xl font-bold xxs:text-5xl sm:text-6xl lg:ml-12 lg:-translate-y-16 lg:text-6xl">
+              Hi! My name is Ignacy. <br />
+            </h1>
+            <h2 className="text-sea mt-16 mt-8 text-3xl font-bold xxs:text-5xl sm:text-6xl lg:ml-12 lg:max-w-[70vw] lg:-translate-y-16 lg:text-7xl">
+              I make web-apps tailored for any client's needs.{" "}
+            </h2>
+            <h5 className="pt-4 xxs:text-xl sm:text-2xl md:text-3xl lg:hidden">
+              (frontend, backend, ui)
+            </h5>
+          </div>
         </div>
-        <div className=" bottom-0 mx-auto mt-[33%] sm:mt-[15%] md:mt-[7%] flex flex min-h-[50%] items-center items-center justify-center">
-          <div className="section-menu relative mt-12 flex pt-8 xs:mb-12 xs:mt-0 xs:pb-12 xs:pt-0 md:justify-center md:pt-[25%] lg:hidden">
+        <div className=" bottom-0 mx-auto mt-[33%] flex flex min-h-[50%] items-center items-center justify-center sm:mt-[15%] md:mt-[7%]">
+          <div className="section-menu xxxs:mt-12 xxxs:pt-8 relative flex xs:mb-12 xs:mt-0 xs:pb-12 xs:pt-0 md:justify-center md:pt-[25%] lg:hidden">
             <button className="menu-button m-2 p-2 sm:p-3 sm:text-xl">
               About
             </button>
@@ -33,16 +53,18 @@ export default function LandingPage() {
           </div>
           <div className="m-8 hidden lg:block ">
             {/* <h4 className="text-2xl font-bold">About me</h4> */}
-            <p className="about text-navy relative m-8 p-4 text-left text-xl -translate-y-20">
-              As a, currently freelancing, full-stack developer, I specialize in
-              developing small-scale applications. I find my ground working with
-              servers and databases in Node.js just as well as when designing
-              seamless and intuitive experiences on the front-end working with
-              ReactJs. I also have experience in UI design.
+            <p className="about relative m-2 -translate-y-20 p-4 text-left text-xl">
+              As a currently <b>freelancing full-stack developer</b>, I
+              specialize in developing small-scale applications. I find my
+              ground working with servers and databases in <b>Node.js</b> just
+              as well as when designing seamless and intuitive experiences on
+              the front-end working with <b>ReactJs</b>. Working with clients,
+              I've gathered experience in turning wishes into reality both
+              through code and through personalized <b>UI</b> designs.
             </p>
           </div>
           <Lottie
-            className="hidden max-w-96 lg:block mr-20 -translate-y-20"
+            className="hidden max-w-96 -translate-y-20 lg:block xl:mr-20"
             animationData={windowAnimation}
             loop={true}
           />

@@ -18,7 +18,7 @@ const AccordionItem = ({ question, answer, isOpen, onClick } :accordionItemTypes
         className={`question-container ${isOpen ? "active" : ""}`}
         onClick={onClick}
       >
-        <p className="question-content sm:text-2xl md:text-3xl text-navy">{question}</p>
+        <p className="question-content sm:text-2xl md:text-3xl">{question}</p>
         <IoIosArrowDown className={`arrow ${isOpen ? "active" : ""}`} />
       </button>
 
@@ -31,7 +31,7 @@ const AccordionItem = ({ question, answer, isOpen, onClick } :accordionItemTypes
             : { height: "0px" }
         }
       >
-        { typeof answer === 'string' ? <p className="answer-content text-md sm:text-xl text-navy">{answer}</p> : <div className="answer-content sm:text-xl md:text-2xl text-navy">{answer}</div> }        
+        { typeof answer === 'string' ? <p className="answer-content text-md sm:text-xl">{answer}</p> : <div className="answer-content sm:text-xl md:text-2xl">{answer}</div> }        
       </div>
     </div>
   );

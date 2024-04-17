@@ -20,12 +20,12 @@ export default function ProjectPage({
   live_url,
 }: projectPropTypes) {
   return (
-    <div className="project-main section scale-1/2 relative pt-12">
+    <div className="project-main section scale-1/2 relative pt-12 px-2 md:px-32">
       <div className="hidden lg:block">
-        <h3 className="text-center text-3xl xxs:text-4xl sm:text-4xl text-navy">
+        <h3 className="text-center text-3xl xxs:text-4xl sm:text-4xl">
           {name}
         </h3>
-        <p className=" px-4 py-5 text-center xs:text-xl sm:text-2xl md:text-xl lg:p-2 text-navy">
+        <p className="px-4 py-5 text-center xs:text-xl sm:text-2xl md:text-xl lg:p-2">
           {description}
         </p>
       </div>
@@ -37,7 +37,7 @@ export default function ProjectPage({
           <h3 className="pb-8 text-center text-3xl xxs:text-4xl sm:mb-2 sm:text-5xl lg:hidden lg:pb-2">
             {name}
           </h3>
-          <img className="mx-auto md:my-2 lg:hidden" src={thumbnail_url} />
+          <img className="px-8 md:my-2 lg:hidden" src={thumbnail_url} />
           <p className=" px-4 py-5 text-center xs:text-xl sm:text-2xl md:text-3xl lg:hidden lg:p-2">
             {description}
           </p>
@@ -45,7 +45,7 @@ export default function ProjectPage({
             <Accordion data={accordion_data} />
           </div>
           <div className="my-[12.5%] flex flex-col items-center lg:my-4">
-            <div className="project-links flex justify-center pt-8 lg:pt-0">
+            <div className="project-links flex justify-center -mt-2 xs:mt-0 xxs:pt-8 lg:pt-0">
               <a className="m-4" href={github_url}>
                 {" "}
                 <FaGithub />{" "}

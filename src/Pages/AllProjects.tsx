@@ -110,8 +110,8 @@ const SprawdźFodmap_accordionData = [
       <ul className="answer-list">
         <li>
           Check what you should and shouldn't eat on a lowFODMAP/anti-HIT diet
-          in a matter of literal seconds using the quick search available on the
-          homepage
+          in a matter of literal seconds using quick search function available
+          on the homepage
         </li>
         <li>
           Learn the dietary restrictions category by category by working through
@@ -128,10 +128,12 @@ const SprawdźFodmap_accordionData = [
 
 export default function AllProjects() {
   return (
-    <div className="projects-wrapper">
-      <div className=" relative bg-white text-navy  md:pt-32 text-center xs:min-h-[10vh]">
-        <h2 className="section-header text-navy">Recent projects.</h2>
-      </div>
+    <div className="projects-wrapper section -mt-48 sm:-mt-36 lg:mt-0">
+      {/* <div className=" bg-white relative text-center xs:min-h-[10vh] lg:pt-32"> */}
+      <h2 className="section-header relative pt-12 text-center lg:pt-32">
+        Recent projects.
+      </h2>
+      {/* </div> */}
 
       <ProjectPage
         name="artCollector"
