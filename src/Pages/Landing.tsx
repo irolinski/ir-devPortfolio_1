@@ -1,13 +1,21 @@
 import Lottie from "lottie-react";
 import windowAnimation from "../../public/lotties/window.json";
 
+import { motion } from "framer-motion";
+
+// @ts-ignore
+import { Typewriter } from "../Components/Typewriter.jsx";
+
 // @ts-ignore
 import ParticlesComponent from "../Components/Particles_Stars.jsx";
 
 export default function LandingPage() {
   return (
     <>
-      <a className="relative flex min-h-[100vh] w-[100vw] p-16 md:hidden" href="#landing-page-main"> 
+      <a
+        className="relative flex min-h-[100vh] w-[100vw] p-16 md:hidden"
+        href="#landing-page-main"
+      >
         <Lottie
           className="relative min-w-[100%] -translate-y-6 hover:cursor-s-resize"
           animationData={windowAnimation}
@@ -18,13 +26,36 @@ export default function LandingPage() {
       <div className="landing-page h-auto min-h-[100vh] px-16 pt-8 md:justify-center lg:ml-12 xl:ml-36 2xl:ml-24">
         <div className="relative w-[100%] xs:pt-12 lg:mt-24 xl:mt-32">
           <div className="float-right mr-8 hidden lg:mr-24 lg:flex lg:flex-col lg:pl-20 xl:mr-52 2xl:ml-16">
-            <a
+            <motion.a
               className="bubble-link github-link"
               href="https://github.com/szczek?tab=repositories"
               target="_blank"
+              animate="initial"
+              whileHover="grow"
+              variants={{
+                grow: {
+                  scale: 1.1,
+                },
+                rotate: {
+                  rotate: [null, -5, 5, 0],
+                  transition: {
+                    duration: 10,
+                  },
+                },
+                initial: {
+                  y: [-70, -80],
+                  x: [-50],
+                  rotate: 0,
+                  transition: {
+                    duration: 2,
+                    repeat: Infinity,
+                    repeatType: "reverse",
+                  },
+                },
+              }}
             >
               <img className="github-icon" src="/icons/github.svg" />
-            </a>
+            </motion.a>
             <a className="bubble-link contact-link" href="#contact-section">
               <img className="contact-icon" src="/icons/contact.svg" />
             </a>
@@ -37,19 +68,27 @@ export default function LandingPage() {
             </a>
           </div>
           <div className="xl:mr-8" id="landing-page-main">
-            <h1 className="text-4xl font-bold xxs:text-5xl sm:text-6xl lg:ml-12 lg:-translate-y-16 lg:text-6xl">
-              Hi! My name is Ignacy. <br />
-            </h1>
-            <h2 className="text-sea mt-16 mt-8 text-3xl font-bold xxs:text-5xl sm:text-6xl lg:ml-12 lg:max-w-[70vw] lg:-translate-y-16 lg:text-7xl">
-              I make web-apps tailored for any client's needs.{" "}
-            </h2>
+            <motion.div
+              initial={{ translateX: -100, opacity: 0 }}
+              whileInView={{ translateX: 0, opacity: 1 }}
+              viewport={{ once: false, amount: 0.5 }}
+              transition={{ type: "spring", delay: 0.2, duration: 1 }}
+            >
+              <h1 className="text-4xl font-bold xxs:text-5xl sm:text-6xl lg:ml-12 lg:-translate-y-16 lg:text-6xl">
+                Hi! My name is Ignacy. <br />
+              </h1>
+            </motion.div>
+            <Typewriter
+              className="text-sea mt-16 mt-8 text-3xl font-bold xxs:text-5xl sm:text-6xl lg:ml-12 lg:max-w-[70vw] lg:-translate-y-16 lg:text-7xl"
+              text="I make web-apps tailored for any client's needs."
+            />
             <h5 className="pt-4 xxs:text-xl sm:text-2xl md:text-3xl lg:hidden">
               (frontend, backend, ui)
             </h5>
           </div>
         </div>
         <div className=" bottom-0 mx-auto mt-[33%] flex flex min-h-[50%] items-center items-center justify-center sm:mt-[15%] md:mt-[7%]">
-          <div className="section-menu xxxs:mt-12 xxxs:pt-8 relative flex xs:mb-12 xs:mt-0 xs:pb-12 xs:pt-0 md:justify-center md:pt-[25%] lg:hidden">
+          <div className="section-menu relative flex xxxs:mt-12 xxxs:pt-8 xs:mb-12 xs:mt-0 xs:pb-12 xs:pt-0 md:justify-center md:pt-[25%] lg:hidden">
             <a
               className="menu-button m-2 p-2 sm:p-3 sm:text-xl"
               href="#about-section"
@@ -81,7 +120,7 @@ export default function LandingPage() {
             </p>
           </div>
           <Lottie
-            className="hidden max-w-96 -translate-y-20 lg:block xl:mr-20"
+            className="hidden max-w-96 -translate-y-20 hover:cursor-crosshair lg:block xl:mr-20"
             animationData={windowAnimation}
             loop={true}
           />

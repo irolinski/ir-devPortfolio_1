@@ -1,6 +1,7 @@
 import Accordion from "../Components/Accordion";
 
 import { FaDesktop, FaGithub } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 type projectPropTypes = {
   name: string;
@@ -21,15 +22,30 @@ export default function ProjectPage({
 }: projectPropTypes) {
   return (
     <div className="project-main section scale-1/2 relative px-2 pt-12 md:px-32">
-      <div className="hidden lg:block">
+      <motion.div
+        initial={{ translateX: -100, opacity: 0 }}
+        whileInView={{ translateX: 0, opacity: 1 }}
+        viewport={{ once: true, amount: 0.5 }}
+        transition={{ type: "spring", delay: 0.2, duration: 1 }}
+        className="hidden lg:block"
+      >
         <h3 className="text-center text-3xl xxs:text-4xl sm:text-4xl">
           {name}
         </h3>
         <p className="px-4 py-5 text-center xs:text-xl sm:text-2xl md:text-xl lg:p-2">
           {description}
         </p>
-      </div>
-      <div className="section project lg:flex">
+      </motion.div>
+      <motion.div
+        initial={{ translateX: -100, opacity: 0.2 }}
+        whileInView={{ translateX: 0, opacity: 1 }}
+        viewport={{ once: true, amount: 0.5 }}
+        transition={{
+          duration: 0.5,
+          ease: "easeOut",
+        }}
+        className="section project lg:flex"
+      >
         <div className="hidden w-1/2 items-center lg:flex">
           <img className="relative mx-auto w-3/4 md:my-2" src={thumbnail_url} />
         </div>
@@ -57,7 +73,7 @@ export default function ProjectPage({
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }

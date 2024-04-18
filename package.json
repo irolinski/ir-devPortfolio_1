@@ -17,6 +17,7 @@
     "@tsparticles/preset-bubbles": "^3.0.2",
     "@tsparticles/react": "^3.0.0",
     "@tsparticles/slim": "^3.3.0",
+    "framer-motion": "^11.1.5",
     "lottie-react": "^2.4.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
