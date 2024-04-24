@@ -5,7 +5,7 @@
 
 <h4 align="center">A minimalistic single-page portfolio website built using React</h4>
 
-<p align="center>
+<p align="center">
 <img src="https://res.cloudinary.com/dtjtqp7r1/image/upload/v1714002532/my-dev-portfolio/nfoqg7oukdvawgr8ic6n.gif" />
 </p>
 
