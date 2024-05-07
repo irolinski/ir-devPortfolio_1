@@ -1,6 +1,6 @@
 
 <h1 align="center">
-  Szczek's first portfolio
+  My first portfolio website
 </h1>
 
 <h4 align="center">A minimalistic single-page portfolio website built using React</h4>
@@ -25,10 +25,5 @@ This software uses the following open source packages:
 - Sass
 - tsParticles
 - Tailwind
-
-
-## License
-
-MIT
 
 ---
