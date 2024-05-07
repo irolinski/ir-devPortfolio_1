@@ -1,6 +1,4 @@
-import Lottie from "lottie-react";
 import ProjectPage from "./Project";
-import layingAnimation from "../../public/lotties/looking.json";
 
 const artCollector_accordionData = [
   {
@@ -59,8 +57,8 @@ const artCollector_accordionData = [
         The currently public alpha version of the app is deployed on a free-tier
         server and thus the title page make take as long as about 60 seconds to
         load if the page has not been visited for a short while. I apologize for
-        this incovenience. <br /> <br /> Username: Pies <br /> <br /> Password:
-        psy123 <br /> <br /> Have fun!
+        this incovenience. <br /> <br /> Username: vanGoghFan <br /> <br /> Password:
+        i&lt;3VanGogh <br /> <br /> Have fun!
       </p>
     ),
   },
@@ -83,7 +81,11 @@ const olaPortfolio_accordionData = [
   },
   {
     question: "Features",
-    answer: "",
+    answer: (<ul className="answer-list">
+      <li>Original minimalistic design based on my client's guidelines.</li>{" "}
+      <li>Modular code design that makes editing the content a matter of seconds.</li>{" "}
+      <li>Slideshows and carousels written from scratch to allow both portrait and landscape orientation images in one series and also to fit the design choices.</li>{" "}
+    </ul>),
   },
 ];
 
@@ -143,7 +145,7 @@ export default function AllProjects() {
         thumbnail_url="https://res.cloudinary.com/dtjtqp7r1/image/upload/v1713120473/my-dev-portfolio/mrbgjmepxt5svp3ymxqv.png"
         description="Personal art collection catalogue web-app"
         accordion_data={artCollector_accordionData}
-        github_url="https://github.com/szczek/artCollector"
+        github_url="https://github.com/irolinski/artCollector"
         live_url="https://artcollector.azurewebsites.net/"
       />
 
@@ -152,7 +154,7 @@ export default function AllProjects() {
         thumbnail_url="https://res.cloudinary.com/dtjtqp7r1/image/upload/v1713120473/my-dev-portfolio/nktzfpsewbiwgg58ni6w.png"
         description="Custom photographer's portfolio webiste"
         accordion_data={olaPortfolio_accordionData}
-        github_url="https://github.com/szczek/ola-portfolio"
+        github_url="https://github.com/irolinski/minimalisticPhotographyPortfolio_1"
         live_url="https://olakasprzykiewicz.pl/"
       />
 
@@ -161,7 +163,7 @@ export default function AllProjects() {
         thumbnail_url="https://res.cloudinary.com/dtjtqp7r1/image/upload/v1713120473/my-dev-portfolio/s4mltucdrff1xnonarv2.png"
         description="Interactive diet database & info-hub for patients with gut health issues"
         accordion_data={SprawdźFodmap_accordionData}
-        github_url="https://github.com/szczek/wrazliwe-jelita"
+        github_url="https://github.com/irolinski/wrazliwe-jelita"
         live_url="https://sprawdzfodmap.pl/"
       />
     </div>

@@ -28,7 +28,7 @@ export default function LandingPage() {
           <div className="float-right mr-8 hidden lg:mr-24 lg:flex lg:flex-col lg:pl-20 xl:mr-52 2xl:ml-16">
             <motion.a
               className="bubble-link github-link"
-              href="https://github.com/szczek?tab=repositories"
+              href="https://github.com/irolinski?tab=repositories"
               target="_blank"
               animate="initial"
               whileHover="grow"
@@ -79,7 +79,7 @@ export default function LandingPage() {
               </h1>
             </motion.div>
             <Typewriter
-              className="text-sea mt-16 mt-8 text-3xl font-bold xxs:text-5xl sm:text-6xl lg:ml-12 lg:max-w-[70vw] lg:-translate-y-16 lg:text-7xl"
+              className="text-sea mt-8 text-3xl font-bold xxs:text-5xl sm:text-6xl lg:ml-12 lg:max-w-[70vw] lg:-translate-y-16 lg:text-7xl"
               text="I make web-apps tailored for any client's needs."
             />
             <h5 className="pt-4 xxs:text-xl sm:text-2xl md:text-3xl lg:hidden">
@@ -87,7 +87,7 @@ export default function LandingPage() {
             </h5>
           </div>
         </div>
-        <div className=" bottom-0 mx-auto mt-[33%] flex flex min-h-[50%] items-center items-center justify-center sm:mt-[15%] md:mt-[7%]">
+        <div className=" bottom-0 mx-auto mt-[33%] flex min-h-[50%] items-center justify-center sm:mt-[15%] md:mt-[7%]">
           <div className="section-menu relative flex xxxs:mt-12 xxxs:pt-8 xs:mb-12 xs:mt-0 xs:pb-12 xs:pt-0 md:justify-center md:pt-[25%] lg:hidden">
             <a
               className="menu-button m-2 p-2 sm:p-3 sm:text-xl"
