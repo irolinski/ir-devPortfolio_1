@@ -28,7 +28,7 @@ export default function LandingPage() {
           <div className="float-right mr-8 hidden lg:mr-24 lg:flex lg:flex-col lg:pl-20 xl:mr-52 2xl:ml-16">
             <motion.a
               className="bubble-link github-link"
-              href="https://github.com/irolinski?tab=repositories"
+              href="https://github.com/irolinski"
               target="_blank"
               animate="initial"
               whileHover="grow"

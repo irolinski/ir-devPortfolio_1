@@ -234,6 +234,9 @@ $xxl: 1536px; // '2xl' in tailwind
     background: linear-gradient($gradient2, $gradient3);
   }
   &:nth-child(4) {
+     background: $gradient3;
+  }
+  &:nth-child(5) {
     background: linear-gradient($gradient3, $gradient4);
   }
 
@@ -249,8 +252,11 @@ $xxl: 1536px; // '2xl' in tailwind
       background: linear-gradient($gradient2, $gradient3);
     }
     &:nth-child(4) {
-      background: linear-gradient($gradient3, $gradient4);
-    }
+      background: $gradient3;
+   }
+   &:nth-child(5) {
+     background: linear-gradient($gradient3, $gradient4);
+   }
   }
 }
 

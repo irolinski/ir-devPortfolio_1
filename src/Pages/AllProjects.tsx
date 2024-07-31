@@ -57,8 +57,8 @@ const artCollector_accordionData = [
         The currently public alpha version of the app is deployed on a free-tier
         server and thus the title page make take as long as about 60 seconds to
         load if the page has not been visited for a short while. I apologize for
-        this incovenience. <br /> <br /> Username: vanGoghFan <br /> <br /> Password:
-        i&lt;3VanGogh <br /> <br /> Have fun!
+        this incovenience. <br /> <br /> Username: vanGoghFan <br /> <br />{" "}
+        Password: i&lt;3VanGogh <br /> <br /> Have fun!
       </p>
     ),
   },
@@ -81,15 +81,28 @@ const olaPortfolio_accordionData = [
   },
   {
     question: "Features",
-    answer: (<ul className="answer-list">
-      <li>Original minimalistic design based on my client's guidelines.</li>{" "}
-      <li>Modular code design that makes editing the content a matter of seconds.</li>{" "}
-      <li>Slideshows and carousels written from scratch to allow both portrait and landscape orientation images in one series and also to fit the design choices.</li>{" "}
-    </ul>),
+    answer: (
+      <ul className="answer-list">
+        <li>Original minimalistic design based on my client's guidelines.</li>{" "}
+        <li>
+          Fully functional Content Management System, fit for my client's
+          requirements.{" "}
+        </li>{" "}
+        <li>
+          Modular code design that makes editing the content a matter of
+          seconds.
+        </li>{" "}
+        <li>
+          Slideshows and carousels written from scratch to allow both portrait
+          and landscape orientation images in one series and also to fit the
+          design choices.
+        </li>{" "}
+      </ul>
+    ),
   },
 ];
 
-const SprawdźFodmap_accordionData = [
+const SprawdzFodmap_accordionData = [
   {
     question: "Description",
     answer: (
@@ -128,6 +141,45 @@ const SprawdźFodmap_accordionData = [
   },
 ];
 
+const topstersClassic_accordionData = [
+  {
+    question: "Description",
+    answer: (
+      <p>
+        Topsters Classic is a hobby project that I have made, channeling my
+        nostalgia for the original Topsters page that I've used as a teen
+        lurking music forums circa 2013. The design of the charts is recreated
+        from the original charts designsand the credit for them is due to the
+        developer of the original app. The UI is designed from scratch for it to
+        be up to today's standards; especially in regards to mobile use.
+      </p>
+    ),
+  },
+  {
+    question: "Features",
+    answer: (
+      <ul className="answer-list">
+        <li>Create your own charts using a highly customizable editor</li>
+        <li>Three chart designs, incl. one with user-customizable size</li>{" "}
+        <li>
+          Either export your charts or save them for later thanks to easy-to-use
+          storage system
+        </li>
+        <li>
+          Now also easily available on mobile devices thanks to responsive UI
+          design
+        </li>
+        <li>
+          New chart editing system that lets the user add new positions quickly
+          by clicking instead of draggin, with image position auto-advancing
+        </li>
+        <li>Original Top 100 and Top 40 designs available again
+        </li>
+      </ul>
+    ),
+  },
+];
+
 export default function AllProjects() {
   return (
     <div
@@ -154,7 +206,7 @@ export default function AllProjects() {
         thumbnail_url="https://res.cloudinary.com/dtjtqp7r1/image/upload/v1713120473/my-dev-portfolio/nktzfpsewbiwgg58ni6w.png"
         description="Custom photographer's portfolio webiste"
         accordion_data={olaPortfolio_accordionData}
-        github_url="https://github.com/irolinski/minimalisticPhotographyPortfolio_1"
+        github_url="https://github.com/irolinski/olaPortoflio_withCMS"
         live_url="https://olakasprzykiewicz.pl/"
       />
 
@@ -162,9 +214,18 @@ export default function AllProjects() {
         name="SprawdźFodmap"
         thumbnail_url="https://res.cloudinary.com/dtjtqp7r1/image/upload/v1713120473/my-dev-portfolio/s4mltucdrff1xnonarv2.png"
         description="Interactive diet database & info-hub for patients with gut health issues"
-        accordion_data={SprawdźFodmap_accordionData}
-        github_url="https://github.com/irolinski/wrazliwe-jelita"
+        accordion_data={SprawdzFodmap_accordionData}
+        github_url="https://github.com/irolinski/sprawdzFodmap"
         live_url="https://sprawdzfodmap.pl/"
+      />
+
+      <ProjectPage
+        name="Topsters Classic"
+        thumbnail_url="https://res.cloudinary.com/dtjtqp7r1/image/upload/v1722329090/my-dev-portfolio/nkujttkfbycj24nsvyf1.jpg"
+        description="Music album chart image generator based on a legacy website with a cult status among music forums"
+        accordion_data={topstersClassic_accordionData}
+        github_url="https://github.com/irolinski/topsters-classic"
+        live_url="https://neverendingchartequations.top/"
       />
     </div>
   );
