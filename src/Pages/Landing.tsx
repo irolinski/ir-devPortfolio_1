@@ -120,7 +120,7 @@ export default function LandingPage() {
             </p>
           </div>
           <Lottie
-            className="hidden max-w-96 -translate-y-20 hover:cursor-crosshair lg:block xl:mr-20"
+            className="hidden max-w-96 -translate-y-20 hover:cursor-crosshair lg:block xl:mr-20 lg:min-w-[300px] xl:min-w-[350px] "
             animationData={windowAnimation}
             loop={true}
           />
