@@ -1,15 +1,14 @@
-import Accordion from "../Components/Accordion";
-
-import { FaDesktop, FaGithub } from "react-icons/fa";
-import { motion } from "framer-motion";
+import { motion } from 'framer-motion';
+import { FaDesktop, FaGithub } from 'react-icons/fa';
+import Accordion from '../Components/Accordion';
 
 type projectPropTypes = {
   name: string;
   thumbnail_url: string;
   description: string;
   accordion_data: { question: string; answer: JSX.Element | string }[];
-  github_url: string;
-  live_url: string;
+  github_url?: string;
+  live_url?: string;
 };
 
 export default function ProjectPage({
@@ -27,12 +26,12 @@ export default function ProjectPage({
         whileInView={{ translateX: 0, opacity: 1 }}
         viewport={{ once: true, amount: 0.5 }}
         transition={{ type: "spring", delay: 0.2, duration: 1 }}
-        className="hidden lg:block"
+        className="hidden items-center justify-center  lg:flex lg:flex-col"
       >
         <h3 className="text-center text-3xl xxs:text-4xl sm:text-4xl">
           {name}
         </h3>
-        <p className="px-4 py-5 text-center xs:text-xl sm:text-2xl md:text-xl lg:p-2">
+        <p className=" px-4 py-5 text-center xs:text-xl sm:text-2xl md:text-xl lg:w-[55%] lg:p-2">
           {description}
         </p>
       </motion.div>
@@ -62,14 +61,22 @@ export default function ProjectPage({
           </div>
           <div className="my-[12.5%] flex flex-col items-center lg:my-4">
             <div className="project-links -mt-2 flex justify-center xxs:pt-8 xs:mt-0 lg:pt-0">
-              <a className="project-icon m-4" href={github_url} target="_blank">
-                {" "}
-                <FaGithub />{" "}
-              </a>
-              <a className="project-icon m-4" href={live_url} target="_blank">
-                {" "}
-                <FaDesktop />{" "}
-              </a>
+              {github_url && (
+                <a
+                  className="project-icon m-4"
+                  href={github_url}
+                  target="_blank"
+                >
+                  {" "}
+                  <FaGithub />{" "}
+                </a>
+              )}
+              {live_url && (
+                <a className="project-icon m-4" href={live_url} target="_blank">
+                  {" "}
+                  <FaDesktop />{" "}
+                </a>
+              )}
             </div>
           </div>
         </div>
