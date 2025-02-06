@@ -2,10 +2,11 @@ import { projectData } from '../constants/projects/projects';
 import ProjectPage from './Project';
 
 const projectsToDisplay = [
-  projectData.artCollector,
+  projectData.Well_CBT,
   projectData.olaPortfolio,
-  projectData.sprawdzFodmap,
   projectData.topstersClassic,
+  projectData.artCollector,
+  projectData.sprawdzFodmap,
 ];
 
 export default function AllProjects() {

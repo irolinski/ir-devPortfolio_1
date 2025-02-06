@@ -40,4 +40,13 @@ export const projectData = {
     github_url: "https://github.com/irolinski/topsters-classic",
     live_url: "https://neverendingchartequations.top/",
   },
+  Well_CBT: {
+    name: "Well - A Pocket CBT Aid",
+    thumbnail_url:
+      "https://res.cloudinary.com/dtjtqp7r1/image/upload/v1738851572/my-dev-portfolio/dlfafmw3m1nzbqlkmmjd.png",
+    description:
+      "Mobile self-help app providing science-based, easy-to-use psychotherapeutic interventions on-the-go",
+    accordion_data: accordionData.well,
+    github_url: "https://github.com/irolinski/Well_CBT",
+  },
 };
