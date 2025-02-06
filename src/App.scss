@@ -186,9 +186,6 @@ $xxl: 1536px; // '2xl' in tailwind
 }
 
 .project {
-
-
-
   @media (min-width: $lg) {
     scale: 0.7;
 
@@ -201,7 +198,6 @@ $xxl: 1536px; // '2xl' in tailwind
         rgba(0, 0, 0, 0.07) 0px 16px 32px,
         rgba(0, 0, 0, 0.07) 0px 32px 64px;
     }
-  
   }
 
   .project-links {
@@ -213,7 +209,6 @@ $xxl: 1536px; // '2xl' in tailwind
         background-color: #f9f7f751;
       }
     }
-
 
     svg {
       width: 2em;
@@ -234,7 +229,7 @@ $xxl: 1536px; // '2xl' in tailwind
     background: linear-gradient($gradient2, $gradient3);
   }
   &:nth-child(4) {
-     background: $gradient3;
+    background: $gradient3;
   }
   &:nth-child(5) {
     background: linear-gradient($gradient3, $gradient4);
@@ -253,10 +248,13 @@ $xxl: 1536px; // '2xl' in tailwind
     }
     &:nth-child(4) {
       background: $gradient3;
-   }
-   &:nth-child(5) {
-     background: linear-gradient($gradient3, $gradient4);
-   }
+    }
+    &:nth-child(5) {
+      background: $gradient3;
+    }
+    &:nth-child(6) {
+      background: linear-gradient($gradient3, $gradient4);
+    }
   }
 }
 
