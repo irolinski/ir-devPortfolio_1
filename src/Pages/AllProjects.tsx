@@ -1,5 +1,5 @@
+import ProjectPage from "../Components/Project";
 import { projectData } from "../constants/projects/projects";
-import ProjectPage from "./Project";
 
 const projectsToDisplay = [
   projectData.Well_CBT,

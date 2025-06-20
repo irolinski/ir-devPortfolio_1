@@ -1,6 +1,6 @@
-import { motion } from 'framer-motion';
-import { FaDesktop, FaGithub } from 'react-icons/fa';
-import Accordion from '../Components/Accordion';
+import { motion } from "framer-motion";
+import { FaDesktop, FaGithub } from "react-icons/fa";
+import Accordion from "../Components/Accordion";
 
 type projectPropTypes = {
   name: string;
@@ -67,14 +67,12 @@ export default function ProjectPage({
                   href={github_url}
                   target="_blank"
                 >
-                  {" "}
-                  <FaGithub />{" "}
+                  <FaGithub />
                 </a>
               )}
               {live_url && (
                 <a className="project-icon m-4" href={live_url} target="_blank">
-                  {" "}
-                  <FaDesktop />{" "}
+                  <FaDesktop />
                 </a>
               )}
             </div>
