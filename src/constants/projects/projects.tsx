@@ -56,5 +56,7 @@ export const projectData = {
       "Mobile self-help app providing science-based, easy-to-use psychotherapeutic interventions on-the-go",
     accordion_data: accordionData.well,
     github_url: "https://github.com/irolinski/Well_CBT",
+    appstore_url:
+      "https://apps.apple.com/pl/app/worryfree-pocket-cbt-aid/id6745962528?l",
   },
 };
