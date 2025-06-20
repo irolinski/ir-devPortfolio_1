@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 import { FaAppStore, FaDesktop, FaGithub, FaGooglePlay } from "react-icons/fa";
 import Accordion from "./Accordion";
 
@@ -23,6 +24,8 @@ export default function ProjectPage({
   appstore_url,
   googleplay_url,
 }: projectPropTypes) {
+  const { t } = useTranslation();
+
   return (
     <div className="project-main section scale-1/2 relative px-2 pt-12 md:px-32">
       <motion.div
@@ -33,10 +36,10 @@ export default function ProjectPage({
         className="hidden items-center justify-center  lg:flex lg:flex-col"
       >
         <h3 className="text-center text-3xl xxs:text-4xl sm:text-4xl">
-          {name}
+          {t(name)}
         </h3>
         <p className=" px-4 py-5 text-center xs:text-xl sm:text-2xl md:text-xl lg:w-[55%] lg:p-2">
-          {description}
+          {t(description)}
         </p>
       </motion.div>
       <motion.div
@@ -54,11 +57,11 @@ export default function ProjectPage({
         </div>
         <div className="lg:w-1/2">
           <h3 className="pb-8 text-center text-3xl xxs:text-4xl sm:mb-2 sm:text-5xl lg:hidden lg:pb-2">
-            {name}
+            {t(name)}
           </h3>
           <img className="px-8 md:my-2 lg:hidden" src={thumbnail_url} />
           <p className=" px-4 py-5 text-center xs:text-xl sm:text-2xl md:text-3xl lg:hidden lg:p-2">
-            {description}
+            {t(description)}
           </p>
           <div className="flex justify-center px-4 pb-5 md:pt-12 lg:p-4">
             <Accordion data={accordion_data} />
