@@ -62,6 +62,32 @@ const artCollector_accordionData = [
   },
 ];
 
+const neuroCare_accordionData = [
+  {
+    question: "Description",
+    answer: (
+      <p>
+        A simple landing page with a contact form. I've designed top and bottom
+        screens and developed the whole page from scratch. I've also modified
+        the SVG icons provided by my client for the sake of design coherence.
+      </p>
+    ),
+  },
+  {
+    question: "Features",
+    answer: (
+      <ul className="answer-list">
+        <li>Responsive design optimized for both desktop and mobile devices</li>
+        <li>Custom-designed hero and footer sections for brand consistency</li>
+        <li>Interactive contact form with client-side validation</li>
+        <li>Form submissions integrated with backend API</li>
+        <li>SVG icons modified for visual consistency and performance</li>
+        <li>Smooth scrolling and subtle animations for enhanced UX</li>
+      </ul>
+    ),
+  },
+];
+
 const olaPortfolio_accordionData = [
   {
     question: "Description",
@@ -221,6 +247,7 @@ const well_accordionData = [
 
 export const accordionData = {
   artCollector: artCollector_accordionData,
+  neuroCare: neuroCare_accordionData,
   olaPortfolio: olaPortfolio_accordionData,
   sprawdzFodmap: SprawdzFodmap_accordionData,
   topstersClassic: topstersClassic_accordionData,

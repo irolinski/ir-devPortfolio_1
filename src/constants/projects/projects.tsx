@@ -1,4 +1,4 @@
-import { accordionData } from './accordionData';
+import { accordionData } from "./accordionData";
 
 export const projectData = {
   artCollector: {
@@ -9,6 +9,14 @@ export const projectData = {
     accordion_data: accordionData.artCollector,
     github_url: "https://github.com/irolinski/artCollector",
     live_url: "https://artcollector.azurewebsites.net/",
+  },
+  neuroCare: {
+    name: "NeuroCare",
+    thumbnail_url:
+      "https://res.cloudinary.com/dtjtqp7r1/image/upload/v1750426367/my-dev-portfolio/od6ik86tynoubexbblxg.png",
+    description: "Landing page for a medical facility",
+    accordion_data: accordionData.neuroCare,
+    live_url: "https://neurocare.cmneuro.pl/",
   },
 
   olaPortfolio: {

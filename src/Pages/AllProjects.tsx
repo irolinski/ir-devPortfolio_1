@@ -1,9 +1,10 @@
-import { projectData } from '../constants/projects/projects';
-import ProjectPage from './Project';
+import { projectData } from "../constants/projects/projects";
+import ProjectPage from "./Project";
 
 const projectsToDisplay = [
   projectData.Well_CBT,
   projectData.olaPortfolio,
+  projectData.neuroCare,
   projectData.topstersClassic,
   projectData.artCollector,
   projectData.sprawdzFodmap,
