@@ -1,14 +1,19 @@
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 import { FaPhoneAlt } from "react-icons/fa";
 import { IoIosMail } from "react-icons/io";
 
 export default function ContactPage() {
+  const { t } = useTranslation();
+
   return (
     <div
       className="contact section bg-white flex justify-center lg:block"
       id="contact-section"
     >
-      <h2 className="section-header text-center lg:hidden">Contact me!</h2>
+      <h2 className="section-header text-center lg:hidden">
+        {t("contactMe.header")}
+      </h2>
       <div className="width-[100vw] absolute flex min-h-[90%] flex-col items-center justify-center xxs:min-h-[80%] xxs:pt-[15vh] md:pt-[7.5vh] lg:relative lg:flex-row">
         <motion.div
           initial={{ translateX: 100, opacity: 0 }}

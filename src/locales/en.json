@@ -1,0 +1,27 @@
+{
+  "landing": {
+    "nav": {
+      "about": "About",
+      "projects": "Projects",
+      "contact": "Contact"
+    },
+    "greeting": "Hi! My name is Ignacy.",
+    "about": "I make web-apps tailored for any client's needs.",
+    "bio": "As a currently <b>freelancing full-stack developer</b>, I specialize in developing small-scale applications. I find my ground working with servers and databases in <b>Node.js</b> just as well as when designing seamless and intuitive experiences on the front-end working with <b>ReactJs</b>. Working with clients, I've gathered experience in turning wishes into reality both through code and through personalized <b>UI</b> designs."
+  },
+  "aboutMe": {
+    "header": "About me.",
+    "mobileText": {
+      "line_1": "My name is Ignacy and I'm a freelancing <b>full-stack</b> web developer.",
+      "line_2": "My main stack is <b>Node.js</b> and <b>React</b> w/ various UI frameworks.",
+      "line_3": "I'm experienced in working with clients turning wishes into reality through <b>code</b> and <b>personalized UI designs</b> fit according to my clients' needs."
+    }
+  },
+  "recentProjects": {
+    "header": "Recent projects."
+  },
+
+  "contactMe": {
+    "header": "Contact me."
+  }
+}

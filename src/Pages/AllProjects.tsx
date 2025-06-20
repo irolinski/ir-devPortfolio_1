@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import ProjectPage from "../Components/Project";
 import { projectData } from "../constants/projects/projects";
 
@@ -11,13 +12,15 @@ const projectsToDisplay = [
 ];
 
 export default function AllProjects() {
+  const { t } = useTranslation();
+
   return (
     <div
       className="projects-wrapper section -mt-48 sm:-mt-36 lg:mt-0"
       id="projects-section"
     >
       <h2 className="section-header relative pt-12 text-center lg:pt-32">
-        Recent projects.
+        {t("recentProjects.header")}
       </h2>
       {projectsToDisplay.map((project, indexNum: number) => (
         <ProjectPage {...project} key={indexNum} />

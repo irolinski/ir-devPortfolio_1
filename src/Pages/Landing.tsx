@@ -1,15 +1,14 @@
-import Lottie from "lottie-react";
-import windowAnimation from "../../public/lotties/window.json";
-
 import { motion } from "framer-motion";
-
+import Lottie from "lottie-react";
+import { Trans, useTranslation } from "react-i18next";
+import windowAnimation from "../../public/lotties/window.json";
+// @ts-ignore
+import ParticlesComponent from "../Components/Particles_Stars.jsx";
 // @ts-ignore
 import { Typewriter } from "../Components/Typewriter.jsx";
 
-// @ts-ignore
-import ParticlesComponent from "../Components/Particles_Stars.jsx";
-
 export default function LandingPage() {
+  const { t } = useTranslation();
   return (
     <>
       <a
@@ -75,12 +74,12 @@ export default function LandingPage() {
               transition={{ type: "spring", delay: 0.2, duration: 1 }}
             >
               <h1 className="text-4xl font-bold xxs:text-5xl sm:text-6xl lg:ml-12 lg:-translate-y-16 lg:text-6xl">
-                Hi! My name is Ignacy. <br />
+                {t("landing.greeting")} <br />
               </h1>
             </motion.div>
             <Typewriter
               className="text-sea mt-8 text-3xl font-bold xxs:text-5xl sm:text-6xl lg:ml-12 lg:max-w-[70vw] lg:-translate-y-16 lg:text-7xl"
-              text="I make web-apps tailored for any client's needs."
+              text={t("landing.about")}
             />
             <h5 className="pt-4 xxs:text-xl sm:text-2xl md:text-3xl lg:hidden">
               (frontend, backend, ui)
@@ -93,34 +92,33 @@ export default function LandingPage() {
               className="menu-button m-2 p-2 sm:p-3 sm:text-xl"
               href="#about-section"
             >
-              About
+              {t("landing.nav.about")}
             </a>
             <a
               className="menu-button m-2 p-2 sm:p-3 sm:text-xl"
               href="#projects-section"
             >
-              Projects
+              {t("landing.nav.projects")}
             </a>
             <a
               className="menu-button m-2 p-2 sm:p-3 sm:text-xl"
               href="#contact-section"
             >
-              Contact
+              {t("landing.nav.contact")}
             </a>
           </div>
           <div className="m-8 hidden lg:block ">
             <p className="about relative m-2 -translate-y-20 p-4 text-left text-xl">
-              As a currently <b>freelancing full-stack developer</b>, I
-              specialize in developing small-scale applications. I find my
-              ground working with servers and databases in <b>Node.js</b> just
-              as well as when designing seamless and intuitive experiences on
-              the front-end working with <b>ReactJs</b>. Working with clients,
-              I've gathered experience in turning wishes into reality both
-              through code and through personalized <b>UI</b> designs.
+              <Trans
+                i18nKey="landing.bio"
+                components={{
+                  b: <span className="font-bold" />,
+                }}
+              />
             </p>
           </div>
           <Lottie
-            className="hidden max-w-96 -translate-y-20 hover:cursor-crosshair lg:block xl:mr-20 lg:min-w-[300px] xl:min-w-[350px] "
+            className="hidden max-w-96 -translate-y-20 hover:cursor-crosshair lg:block lg:min-w-[300px] xl:mr-20 xl:min-w-[350px] "
             animationData={windowAnimation}
             loop={true}
           />
