@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
-import { FaDesktop, FaGithub } from "react-icons/fa";
-import Accordion from "../Components/Accordion";
+import { FaAppStore, FaDesktop, FaGithub, FaGooglePlay } from "react-icons/fa";
+import Accordion from "./Accordion";
 
 type projectPropTypes = {
   name: string;
@@ -9,6 +9,8 @@ type projectPropTypes = {
   accordion_data: { question: string; answer: JSX.Element | string }[];
   github_url?: string;
   live_url?: string;
+  appstore_url?: string;
+  googleplay_url?: string;
 };
 
 export default function ProjectPage({
@@ -18,6 +20,8 @@ export default function ProjectPage({
   accordion_data,
   github_url,
   live_url,
+  appstore_url,
+  googleplay_url,
 }: projectPropTypes) {
   return (
     <div className="project-main section scale-1/2 relative px-2 pt-12 md:px-32">
@@ -73,6 +77,24 @@ export default function ProjectPage({
               {live_url && (
                 <a className="project-icon m-4" href={live_url} target="_blank">
                   <FaDesktop />
+                </a>
+              )}
+              {appstore_url && (
+                <a
+                  className="project-icon m-4"
+                  href={appstore_url}
+                  target="_blank"
+                >
+                  <FaAppStore />
+                </a>
+              )}
+              {googleplay_url && (
+                <a
+                  className="project-icon m-4"
+                  href={googleplay_url}
+                  target="_blank"
+                >
+                  <FaGooglePlay />
                 </a>
               )}
             </div>
