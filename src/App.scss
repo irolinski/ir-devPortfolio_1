@@ -10,10 +10,10 @@ $sky: #dbe2ef;
 $sea: #3f72af;
 $navy: #17222f;
 
-$gradient1: #c4cbd5;
-$gradient2: #c4cbd4;
-$gradient3: #a8adb78a;
-$gradient4: #61687367;
+$gradient1: rgba($sky, 0.75);
+$gradient2: rgba($sea, 0.25);
+$gradient3: rgba($sea, 0.35);
+$gradient4: rgba($sky, 0.15);
 
 .text-cream {
   color: $cream;
@@ -234,26 +234,13 @@ $xxl: 1536px; // '2xl' in tailwind
   &:nth-child(5) {
     background: linear-gradient($gradient3, $gradient4);
   }
+  &:last-child {
+    background: $gradient4;
+  }
 
   @media (min-width: $lg) {
     & > div.project {
       border-top: 0.1px solid $navy;
-    }
-
-    &:nth-child(2) {
-      background: linear-gradient(transparent, $gradient2);
-    }
-    &:nth-child(3) {
-      background: linear-gradient($gradient2, $gradient3);
-    }
-    &:nth-child(4) {
-      background: $gradient3;
-    }
-    &:nth-child(5) {
-      background: $gradient3;
-    }
-    &:nth-child(6) {
-      background: linear-gradient($gradient3, $gradient4);
     }
   }
 }
