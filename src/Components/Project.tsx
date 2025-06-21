@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
+import React from "react";
 import { useTranslation } from "react-i18next";
 import { FaAppStore, FaDesktop, FaGithub, FaGooglePlay } from "react-icons/fa";
+import { Tooltip } from "react-tooltip";
 import Accordion from "./Accordion";
 
 type projectPropTypes = {
@@ -69,36 +71,63 @@ export default function ProjectPage({
           <div className="my-[12.5%] flex flex-col items-center lg:my-4">
             <div className="project-links -mt-2 flex justify-center xxs:pt-8 xs:mt-0 lg:pt-0">
               {github_url && (
-                <a
-                  className="project-icon m-4"
-                  href={github_url}
-                  target="_blank"
-                >
-                  <FaGithub />
-                </a>
+                <React.Fragment>
+                  <Tooltip id="gh-tooltip" />
+                  <a
+                    className="project-icon m-4"
+                    href={github_url}
+                    target="_blank"
+                    data-tooltip-id="gh-tooltip"
+                    data-tooltip-content={t("recentProjects.tooltips.github")}
+                  >
+                    <FaGithub />
+                  </a>
+                </React.Fragment>
               )}
               {live_url && (
-                <a className="project-icon m-4" href={live_url} target="_blank">
-                  <FaDesktop />
-                </a>
+                <React.Fragment>
+                  <Tooltip id="live_url-tooltip" />
+                  <a
+                    className="project-icon m-4"
+                    href={live_url}
+                    target="_blank"
+                    data-tooltip-id="live_url-tooltip"
+                    data-tooltip-content={t("recentProjects.tooltips.live_url")}
+                  >
+                    <FaDesktop />
+                  </a>
+                </React.Fragment>
               )}
               {appstore_url && (
-                <a
-                  className="project-icon m-4"
-                  href={appstore_url}
-                  target="_blank"
-                >
-                  <FaAppStore />
-                </a>
+                <React.Fragment>
+                  <Tooltip id="appStore-tooltip" />
+
+                  <a
+                    className="project-icon m-4"
+                    href={appstore_url}
+                    target="_blank"
+                    data-tooltip-id="appStore-tooltip"
+                    data-tooltip-content={t("recentProjects.tooltips.appStore")}
+                  >
+                    <FaAppStore />
+                  </a>
+                </React.Fragment>
               )}
               {googleplay_url && (
-                <a
-                  className="project-icon m-4"
-                  href={googleplay_url}
-                  target="_blank"
-                >
-                  <FaGooglePlay />
-                </a>
+                <React.Fragment>
+                  <Tooltip id="googlePlay-tooltip" />
+                  <a
+                    className="project-icon m-4"
+                    href={googleplay_url}
+                    target="_blank"
+                    data-tooltip-id="googlePlay-tooltip"
+                    data-tooltip-content={t(
+                      "recentProjects.tooltips.googlePlay",
+                    )}
+                  >
+                    <FaGooglePlay />
+                  </a>
+                </React.Fragment>
               )}
             </div>
           </div>

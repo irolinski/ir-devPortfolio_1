@@ -1,6 +1,10 @@
 {
   "landing": {
     "choose_language": "Choose language:",
+    "tooltips": {
+      "github": "Go to my GitHub repository",
+      "contact": "Contact me"
+    },
     "nav": {
       "about": "About",
       "projects": "Projects",
@@ -23,6 +27,12 @@
     "description": "Description",
     "try_it": "Try it!",
     "features": "Features",
+    "tooltips": {
+      "github": "See repository",
+      "appStore": "Open Apple AppStore page",
+      "googlePlay": "Open Google Play Store page",
+      "live_url": "Go to website"
+    },
     "projects": {
       "artCollector": {
         "name": "artCollector",

@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import Lottie from "lottie-react";
 import { Trans, useTranslation } from "react-i18next";
+import { Tooltip } from "react-tooltip";
 import windowAnimation from "../../public/lotties/window.json";
 // @ts-ignore
 import ParticlesComponent from "../Components/Particles_Stars.jsx";
@@ -55,12 +56,15 @@ export default function LandingPage() {
       <div className="landing-page h-auto min-h-[100vh] px-16 pt-8 md:justify-center lg:ml-12 xl:ml-36 2xl:ml-24">
         <div className="relative w-[100%] xs:pt-12 lg:mt-24 xl:mt-32">
           <div className="float-right mr-8 hidden lg:mr-24 lg:flex lg:flex-col lg:pl-20 xl:mr-52 2xl:ml-16">
+            <Tooltip id="github-tooltip" />
             <motion.a
               className="bubble-link github-link"
               href="https://github.com/irolinski"
               target="_blank"
               animate="initial"
               whileHover="grow"
+              data-tooltip-id="github-tooltip"
+              data-tooltip-content={t("landing.tooltips.github")}
               variants={{
                 grow: {
                   scale: 1.1,
@@ -85,7 +89,13 @@ export default function LandingPage() {
             >
               <img className="github-icon" src="/icons/github.svg" />
             </motion.a>
-            <a className="bubble-link contact-link" href="#contact-section">
+            <Tooltip id="contact-tooltip" />
+            <a
+              className="bubble-link contact-link"
+              href="#contact-section"
+              data-tooltip-id="contact-tooltip"
+              data-tooltip-content={t("landing.tooltips.contact")}
+            >
               <img className="contact-icon" src="/icons/contact.svg" />
             </a>
             <a
