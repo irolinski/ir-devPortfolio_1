@@ -1,0 +1,84 @@
+{
+  "landing": {
+    "nav": {
+      "about": "O mnie",
+      "projects": "Projekty",
+      "contact": "Kontakt"
+    },
+    "greeting": "Cześć! Nazywam się Ignacy.",
+    "about": "Tworzę aplikacje dopasowane do potrzeb klienta.",
+    "bio": "Jako <b>freelancer i full-stack developer</b>, specjalizuję się w tworzeniu aplikacji webowych. Swobodnie poruszam się zarówno po stronie serwera i baz danych z <b>Node.js</b>, jak i po stronie front-endu, implementując intuicyjne interfejsy w <b>ReactJs</b>. Współpraca z klientami nauczyła mnie przekuwać ich wizje w rzeczywistość – zarówno kodem, jak i poprzez spersonalizowany <b>design UI</b>."
+  },
+  "aboutMe": {
+    "header": "O mnie.",
+    "mobileText": {
+      "line_1": "Mam na imię Ignacy i jestem freelancującym <b>full-stack</b> developerem.",
+      "line_2": "Pracuję głównie w <b>Node.js</b> i <b>React</b>, korzystając z różnych frameworków UI.",
+      "line_3": "Tworzę <b>kod</b> i <b>UI</b> szyte na miarę potrzeb każdego klienta."
+    }
+  },
+  "recentProjects": {
+    "header": "Ostatnie projekty.",
+    "description": "Opis",
+    "try_it": "Wypróbuj!",
+    "features": "Features",
+    "projects": {
+      "artCollector": {
+        "name": "artCollector",
+        "description": "Aplikacja do katalogowania kolekcji dzieł sztuki",
+        "accordion_data": {
+          "description": "Wczesna wersja pełnoprawnej aplikacji typu CRUD do katalogowania niewielkich kolekcji dzieł sztuki. Projekt został zlecony przez członka grupy hobbystycznych kolekcjonerów.\n\n Aplikacja to darmowa, mobilna i intuicyjna alternatywa dla dotychczasowych, przestarzałych programów dostępnych wyłącznie na komputery stacjonarne.\n\n Zbudowana w Node.js z pomocą jQuery i Bootstrapa.",
+          "features": "<li>W pełni funkcjonalna aplikacja katalogująca – responsywna i w pełni funkcjonalna zarówno na komputerze, jak i na urządzeniach mobilnych</li> <li>Tabela danych z rozbudowanymi opcjami filtrowania i wyszukiwania</li> <li>Minimalistyczna strona szczegółów z autorską karuzelą dopasowującą się do rozmiaru obrazów</li> <li>Dwa typy ulotek (pliki PNG do druku) generowane automatycznie dla każdego obiektu</li> <li>Eksport danych do pliku xlsx za pomocą jednego kliknięcia</li> <li>Każdy użytkownik może udostępnić swoją kolekcję publicznie, prywatnie lub z hasłem</li> <li>Usługa przypominania hasła – link z tokenem wysyłany na e-mail</li>",
+          "try_it": "Będę zaszczycony, jeśli zechcesz wypróbować tę aplikację!\n\n Przygotowałem demo z przykładowymi danymi.\n\n Publiczna wersja alfa działa na darmowym serwerze, dlatego pierwsze ładowanie może zająć nawet do 60 sekund, jeśli strona nie była odwiedzana przez dłuższą chwilę. Przepraszam za niedogodność.\n\n Login: vanGoghFan\n\n Hasło: i<3VanGogh\n\n Miłej zabawy!"
+        }
+      },
+
+      "neuroCare": {
+        "name": "NeuroCare",
+        "description": "Landing page dla placówki medycznej",
+        "accordion_data": {
+          "description": "Prosta strona typu landing page z formularzem kontaktowym weryfikowanym usługą reCaptcha. Zaprojektowałem górną i dolną część strony, współpracowałem ze zleceniodawcą przy copywritingu a następnie samodzielnie wdrożyłem cały projekt. Dodatkowo dostosowałem ikony SVG dostarczone przez klienta w celu uzyskania większej spójności wizualnej.",
+          "features": "<li>Responsywny design – dopasowany do komputerów i urządzeń mobilnych</li> <li>Autorski projekt sekcji powitalnej i stopki w duchu identyfikacji wizualnej marki</li> <li>Interaktywny formularz z walidacją reCaptcha</li> <li>Wysyłka formularza zintegrowana z API backendowym</li> <li>Dostosowane ikony SVG dla spójności i wydajności</li> <li>Płynne przewijanie i subtelne animacje dla lepszego UX</li>"
+        }
+      },
+
+      "olaPortfolio": {
+        "name": "Portfolio fotograficzne",
+        "description": "Spersonalizowana strona portfolio profejsonalnej fotografki",
+        "accordion_data": {
+          "description": "Klientka miała bardzo sprecyzowaną wizję swojej strony.\n\n Na podstawie jej wytycznych stworzyłem szkic UI, który następnie przełożyłem na kod.\n\n Karuzele i pokazy slajdów zostały zaprojektowane od podstaw, ponieważ zaproponowane gotowe komponenty nie odpowiadały oczekiwaniom estetycznym.\n\n Strona powstała w React z użyciem Tailwind.",
+          "features": "<li>Oryginalny minimalistyczny design oparty na wytycznych klientki</li> <li>Wbudowany CMS dostosowany do jej potrzeb</li> <li>Modularna struktura kodu – szybka edycja treści</li> <li>Autorskie karuzele i slidery obsługujące obrazy pionowe i poziome w jednym zestawie</li>"
+        }
+      },
+
+      "sprawdzFodmap": {
+        "name": "sprawdzFodmap",
+        "description": "Interaktywna baza dietetyczna dla osób z chorobami jelit",
+        "accordion_data": {
+          "description": "Aplikacja webowa stworzona przez mały zespół pod moim kierownictwem.\n\n To pierwsza taka aplikacja dietetyczna w języku polskim – powstała z myślą o osobach, które nie znają angielskiego na tyle dobrze, by samodzielnie poradzić sobie z dietą, której naukowe typologie dostępne są jedynie w języku angielskim.\n\nBaza danych została opracowana na podstawie rzetelnych źródeł naukowych.\n\nKod napisałem w React, korzystając z komponentów MUI.",
+          "features": "<li>Błyskawiczne wyszukiwanie produktów na diecie lowFODMAP lub anty-HIT</li> <li>Łatwe przeglądanie kategorii żywności przez przejrzyste tabele</li> <li>Pierwsza taka aplikacja na polskim rynku</li> <li>Responsywny design – wygodna także na telefonie</li>"
+        }
+      },
+      "topstersClassic": {
+        "name": "Topsters Classic",
+        "description": "Generator grafik z rankingami albumów muzycznych inspirowany kultową stroną",
+        "accordion_data": {
+          "description": "Topsters Classic to projekt pasjonacki, będący hołdem dla oryginalnej strony Topsters, z której korzystałem jako nastolatek na forach muzycznych ok. 2013 r.\n\n Interfejs użytkownika zaprojektowałem od zera, z myślą o dzisiejszych standardach – w tym użyteczności mobilnej.\n\n Projekt grafik wzorowany jest na oryginalnych, za które należy się uznanie autorowi pierwotnej wersji.",
+          "features": "<li>Tworzenie własnych rankingów w rozbudowanym edytorze</li> <li>Trzy szablony – w tym jeden z możliwością ustawienia własnego rozmiaru</li> <li>Eksport lub zapis projektów dzięki prostemu systemowi przechowywania</li> <li>Responsywny design – łatwa obsługa na telefonie</li> <li>Nowy system edycji – dodawanie albumów kliknięciem z automatycznym przesuwaniem</li> <li>Klasyczne szablony Top 100 i Top 40 znów dostępne</li>"
+        }
+      },
+
+      "worryFree": {
+        "name": "WorryFree – CBT w kieszeni",
+        "description": "Mobilna aplikacja wspierająca zdrowie psychiczne przez naukowe interwencje CBT",
+        "accordion_data": {
+          "description": "WorryFree to aplikacja mobilna oferująca skuteczne, łatwe w użyciu techniki terapii poznawczo-behawioralnej (CBT).\n\n Jej misją jest poprawa dobrostanu psychicznego przez udostępnianie narzędzi samopomocy opartych na nauce w szybkim, codziennym życiu.\n\nTo projekt pasjonacki małego zespołu pod moim kierownictwem – obecnie w fazie wczesnego rozwoju, ale z dużym potencjałem na przyszłość.",
+          "features": "<li>Płynny i nowoczesny interfejs z animacjami</li> <li>Pełna lokalizacja - wersje językowe PL i EN</li> <li>Skuteczne interwencje CBT dostępne zawsze pod ręką</li> <li>Personalizowane ćwiczenia relaksacyjne</li> <li>Archiwum ćwiczeń z zaawansowanymi filtrami</li> <li>System osiągnięć i nagród</li> <li>W pełni dostosowywalne doświadczenie użytkownika</li> <li>Sekcja edukacyjna z rosnącą bazą artykułów naukowych i poradnikowych</li>"
+        }
+      }
+    }
+  },
+  "contactMe": {
+    "header": "Kontakt."
+  }
+}
