@@ -6,11 +6,41 @@ import windowAnimation from "../../public/lotties/window.json";
 import ParticlesComponent from "../Components/Particles_Stars.jsx";
 // @ts-ignore
 import { Typewriter } from "../Components/Typewriter.jsx";
+import i18n from "../i18n.js";
+
+const ChooseLanguageBar = () => {
+  const { t } = useTranslation();
+  return (
+    <div className="choose-language-bar absolute top-8 z-20 flex h-12 w-full flex-col items-center justify-center px-8 sm:relative lg:absolute lg:top-4 lg:items-end">
+      <div className="flex flex-col items-center justify-center">
+        <span>{t("landing.choose_language")}</span>
+        <div className="flex w-24 flex-row justify-between ">
+          <a
+            href="#landing-page-main"
+            className="text-2xl font-bold opacity-50 hover:cursor-pointer hover:opacity-100 focus:opacity-100"
+            onClick={() => i18n.changeLanguage("en")}
+          >
+            EN
+          </a>
+          <span className="text-xl font-bold opacity-75">|</span>
+          <a
+            href="#landing-page-main"
+            className="text-2xl font-bold opacity-50 hover:cursor-pointer hover:opacity-100 focus:opacity-100"
+            onClick={() => i18n.changeLanguage("pl")}
+          >
+            PL
+          </a>
+        </div>
+      </div>
+    </div>
+  );
+};
 
 export default function LandingPage() {
   const { t } = useTranslation();
   return (
     <>
+      <ChooseLanguageBar />
       <a
         className="relative flex min-h-[100vh] w-[100vw] p-16 md:hidden"
         href="#landing-page-main"

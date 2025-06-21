@@ -84,6 +84,11 @@ $xxl: 1536px; // '2xl' in tailwind
   }
 }
 
+.choose-language-bar * {
+  color: #ffffff;
+  z-index: 20;
+}
+
 //landing page
 
 .landing-page {
