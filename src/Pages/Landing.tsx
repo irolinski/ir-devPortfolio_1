@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
 import Lottie from "lottie-react";
 import { Trans, useTranslation } from "react-i18next";
+import { FaBriefcase, FaGithub } from "react-icons/fa";
+import { MdContactPhone } from "react-icons/md";
 import { Tooltip } from "react-tooltip";
 import windowAnimation from "../../public/lotties/window.json";
 // @ts-ignore
@@ -52,7 +54,6 @@ export default function LandingPage() {
           loop={true}
         />
       </a>
-
       <div className="landing-page h-auto min-h-[100vh] px-16 pt-8 md:justify-center lg:ml-12 xl:ml-36 2xl:ml-24">
         <div className="relative w-[100%] xs:pt-12 lg:mt-24 xl:mt-32">
           <div className="float-right mr-8 hidden lg:mr-24 lg:flex lg:flex-col lg:pl-20 xl:mr-52 2xl:ml-16">
@@ -66,14 +67,10 @@ export default function LandingPage() {
               data-tooltip-id="github-tooltip"
               data-tooltip-content={t("landing.tooltips.github")}
               variants={{
-                grow: {
-                  scale: 1.1,
-                },
+                grow: { scale: 1.1 },
                 rotate: {
                   rotate: [null, -5, 5, 0],
-                  transition: {
-                    duration: 10,
-                  },
+                  transition: { duration: 10 },
                 },
                 initial: {
                   y: [-70, -80],
@@ -87,24 +84,64 @@ export default function LandingPage() {
                 },
               }}
             >
-              <img className="github-icon" src="/icons/github.svg" />
+              <FaGithub className="link-icon" />
             </motion.a>
             <Tooltip id="contact-tooltip" />
-            <a
+            <motion.a
               className="bubble-link contact-link"
               href="#contact-section"
+              animate="initial"
+              whileHover="grow"
               data-tooltip-id="contact-tooltip"
               data-tooltip-content={t("landing.tooltips.contact")}
+              variants={{
+                grow: { scale: 1.1 },
+                rotate: {
+                  rotate: [null, -5, 5, 0],
+                  transition: { duration: 10 },
+                },
+                initial: {
+                  y: [-70, -80],
+                  x: [50],
+                  rotate: 0,
+                  transition: {
+                    duration: 2,
+                    repeat: Infinity,
+                    repeatType: "reverse",
+                  },
+                },
+              }}
             >
-              <img className="contact-icon" src="/icons/contact.svg" />
-            </a>
-            <a
-              className="bubble-link instagram-link"
-              href="https://www.instagram.com/ign_cy"
-              target="_blank"
+              <MdContactPhone className="link-icon" />
+            </motion.a>
+            <Tooltip id="projects-tooltip" />
+            <motion.a
+              className="bubble-link projects-link"
+              href="#projects-section"
+              animate="initial"
+              whileHover="grow"
+              data-tooltip-id="projects-tooltip"
+              data-tooltip-content={t("landing.tooltips.projects")}
+              variants={{
+                grow: { scale: 1.1 },
+                rotate: {
+                  rotate: [null, -5, 5, 0],
+                  transition: { duration: 10 },
+                },
+                initial: {
+                  y: [-70, -80],
+                  x: [-50],
+                  rotate: 0,
+                  transition: {
+                    duration: 2,
+                    repeat: Infinity,
+                    repeatType: "reverse",
+                  },
+                },
+              }}
             >
-              <img className="instagram-icon" src="/icons/instagram.svg" />
-            </a>
+              <FaBriefcase className="link-icon" />
+            </motion.a>
           </div>
           <div className="xl:mr-8" id="landing-page-main">
             <motion.div

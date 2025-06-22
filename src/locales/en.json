@@ -3,7 +3,8 @@
     "choose_language": "Choose language:",
     "tooltips": {
       "github": "Go to my GitHub repository",
-      "contact": "Contact me"
+      "contact": "Contact me",
+      "projects": "See my projects"
     },
     "nav": {
       "about": "About",
