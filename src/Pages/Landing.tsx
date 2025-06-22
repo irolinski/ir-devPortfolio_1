@@ -54,7 +54,6 @@ export default function LandingPage() {
           loop={true}
         />
       </a>
-
       <div className="landing-page h-auto min-h-[100vh] px-16 pt-8 md:justify-center lg:ml-12 xl:ml-36 2xl:ml-24">
         <div className="relative w-[100%] xs:pt-12 lg:mt-24 xl:mt-32">
           <div className="float-right mr-8 hidden lg:mr-24 lg:flex lg:flex-col lg:pl-20 xl:mr-52 2xl:ml-16">
