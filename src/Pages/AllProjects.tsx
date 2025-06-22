@@ -19,7 +19,7 @@ export default function AllProjects() {
       className="projects-wrapper section -mt-48 sm:-mt-36 lg:mt-0"
       id="projects-section"
     >
-      <h2 className="section-header relative pt-12 text-center lg:pt-32">
+      <h2 className="section-header relative pt-12 text-center">
         {t("recentProjects.header")}
       </h2>
       {projectsToDisplay.map((project, indexNum: number) => (

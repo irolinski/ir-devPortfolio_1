@@ -7,9 +7,9 @@
       "projects": "See my projects"
     },
     "nav": {
-      "about": "About",
-      "projects": "Projects",
-      "contact": "Contact "
+      "about": "About me",
+      "projects": "My projects",
+      "contact": "Contact me"
     },
     "greeting": "Hi! My name is Ignacy.",
     "about": "I make web-apps tailored for any client's needs.",

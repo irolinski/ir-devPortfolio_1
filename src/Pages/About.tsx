@@ -12,7 +12,7 @@ export default function AboutPage() {
       id="about-section"
     >
       <h2 className="section-header text-center">{t("aboutMe.header")} </h2>
-      <div className="flex flex-col items-center px-4 text-xl sm:text-3xl md:text-4xl lg:text-5xl">
+      <div className="flex flex-col items-center px-4 text-xl sm:text-3xl md:mt-[10%] lg:text-5xl">
         <motion.div
           initial={{ translateX: -100, opacity: 0 }}
           whileInView={{ translateX: 0, opacity: 1 }}
@@ -24,7 +24,7 @@ export default function AboutPage() {
             i18nKey="aboutMe.mobileText.line_1"
             components={{
               b: (
-                <span className="text-2xl font-bold xxs:text-3xl sm:text-4xl md:text-5xl  lg:text-6xl" />
+                <span className="text-2xl font-bold xxs:text-3xl sm:text-4xl  lg:text-6xl" />
               ),
             }}
           />
@@ -40,7 +40,7 @@ export default function AboutPage() {
             i18nKey="aboutMe.mobileText.line_2"
             components={{
               b: (
-                <span className="text-2xl font-bold xxs:text-3xl sm:text-4xl md:text-5xl  lg:text-6xl" />
+                <span className="text-2xl font-bold xxs:text-3xl sm:text-4xl  lg:text-6xl" />
               ),
             }}
           />
@@ -56,7 +56,7 @@ export default function AboutPage() {
             i18nKey="aboutMe.mobileText.line_3"
             components={{
               b: (
-                <span className="text-2xl font-bold xxs:text-3xl sm:text-4xl md:text-5xl  lg:text-6xl" />
+                <span className="text-2xl font-bold xxs:text-3xl sm:text-4xl lg:text-6xl" />
               ),
             }}
           />
