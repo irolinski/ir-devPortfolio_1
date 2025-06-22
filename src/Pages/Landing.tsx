@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import Lottie from "lottie-react";
 import { Trans, useTranslation } from "react-i18next";
-import { FaBriefcase, FaGithub } from "react-icons/fa";
+import { FaBriefcase, FaGithub, FaPhoneAlt, FaUserAlt } from "react-icons/fa";
 import { MdContactPhone } from "react-icons/md";
 import { Tooltip } from "react-tooltip";
 import windowAnimation from "../../public/lotties/window.json";
@@ -39,6 +39,100 @@ const ChooseLanguageBar = () => {
   );
 };
 
+const LinkIcons = () => {
+  const { t } = useTranslation();
+
+  return (
+    <div className="float-right mr-8 flex flex-col pl-20 lg:mr-24 xl:mr-52 2xl:ml-16">
+      <Tooltip id="github-tooltip" />
+      <motion.a
+        className="bubble-link github-link"
+        href="https://github.com/irolinski"
+        target="_blank"
+        animate="initial"
+        whileHover="grow"
+        data-tooltip-id="github-tooltip"
+        data-tooltip-content={t("landing.tooltips.github")}
+        variants={{
+          grow: { scale: 1.1 },
+          rotate: {
+            rotate: [null, -5, 5, 0],
+            transition: { duration: 10 },
+          },
+          initial: {
+            y: [-70, -80],
+            x: [-50],
+            rotate: 0,
+            transition: {
+              duration: 2,
+              repeat: Infinity,
+              repeatType: "reverse",
+            },
+          },
+        }}
+      >
+        <FaGithub className="link-icon" />
+      </motion.a>
+      <Tooltip id="contact-tooltip" />
+      <motion.a
+        className="bubble-link contact-link"
+        href="#contact-section"
+        animate="initial"
+        whileHover="grow"
+        data-tooltip-id="contact-tooltip"
+        data-tooltip-content={t("landing.tooltips.contact")}
+        variants={{
+          grow: { scale: 1.1 },
+          rotate: {
+            rotate: [null, -5, 5, 0],
+            transition: { duration: 10 },
+          },
+          initial: {
+            y: [-70, -80],
+            x: [50],
+            rotate: 0,
+            transition: {
+              duration: 2,
+              repeat: Infinity,
+              repeatType: "reverse",
+            },
+          },
+        }}
+      >
+        <MdContactPhone className="link-icon" />
+      </motion.a>
+      <Tooltip id="projects-tooltip" />
+      <motion.a
+        className="bubble-link projects-link"
+        href="#projects-section"
+        animate="initial"
+        whileHover="grow"
+        data-tooltip-id="projects-tooltip"
+        data-tooltip-content={t("landing.tooltips.projects")}
+        variants={{
+          grow: { scale: 1.1 },
+          rotate: {
+            rotate: [null, -5, 5, 0],
+            transition: { duration: 10 },
+          },
+          initial: {
+            y: [-70, -80],
+            x: [-50],
+            rotate: 0,
+            transition: {
+              duration: 2,
+              repeat: Infinity,
+              repeatType: "reverse",
+            },
+          },
+        }}
+      >
+        <FaBriefcase className="link-icon" />
+      </motion.a>
+    </div>
+  );
+};
+
 export default function LandingPage() {
   const { t } = useTranslation();
   return (
@@ -56,92 +150,8 @@ export default function LandingPage() {
       </a>
       <div className="landing-page h-auto min-h-[100vh] px-16 pt-8 md:justify-center lg:ml-12 xl:ml-36 2xl:ml-24">
         <div className="relative w-[100%] xs:pt-12 lg:mt-24 xl:mt-32">
-          <div className="float-right mr-8 hidden lg:mr-24 lg:flex lg:flex-col lg:pl-20 xl:mr-52 2xl:ml-16">
-            <Tooltip id="github-tooltip" />
-            <motion.a
-              className="bubble-link github-link"
-              href="https://github.com/irolinski"
-              target="_blank"
-              animate="initial"
-              whileHover="grow"
-              data-tooltip-id="github-tooltip"
-              data-tooltip-content={t("landing.tooltips.github")}
-              variants={{
-                grow: { scale: 1.1 },
-                rotate: {
-                  rotate: [null, -5, 5, 0],
-                  transition: { duration: 10 },
-                },
-                initial: {
-                  y: [-70, -80],
-                  x: [-50],
-                  rotate: 0,
-                  transition: {
-                    duration: 2,
-                    repeat: Infinity,
-                    repeatType: "reverse",
-                  },
-                },
-              }}
-            >
-              <FaGithub className="link-icon" />
-            </motion.a>
-            <Tooltip id="contact-tooltip" />
-            <motion.a
-              className="bubble-link contact-link"
-              href="#contact-section"
-              animate="initial"
-              whileHover="grow"
-              data-tooltip-id="contact-tooltip"
-              data-tooltip-content={t("landing.tooltips.contact")}
-              variants={{
-                grow: { scale: 1.1 },
-                rotate: {
-                  rotate: [null, -5, 5, 0],
-                  transition: { duration: 10 },
-                },
-                initial: {
-                  y: [-70, -80],
-                  x: [50],
-                  rotate: 0,
-                  transition: {
-                    duration: 2,
-                    repeat: Infinity,
-                    repeatType: "reverse",
-                  },
-                },
-              }}
-            >
-              <MdContactPhone className="link-icon" />
-            </motion.a>
-            <Tooltip id="projects-tooltip" />
-            <motion.a
-              className="bubble-link projects-link"
-              href="#projects-section"
-              animate="initial"
-              whileHover="grow"
-              data-tooltip-id="projects-tooltip"
-              data-tooltip-content={t("landing.tooltips.projects")}
-              variants={{
-                grow: { scale: 1.1 },
-                rotate: {
-                  rotate: [null, -5, 5, 0],
-                  transition: { duration: 10 },
-                },
-                initial: {
-                  y: [-70, -80],
-                  x: [-50],
-                  rotate: 0,
-                  transition: {
-                    duration: 2,
-                    repeat: Infinity,
-                    repeatType: "reverse",
-                  },
-                },
-              }}
-            >
-              <FaBriefcase className="link-icon" />
-            </motion.a>
+          <div className="hidden md:block">
+            <LinkIcons />
           </div>
           <div className="xl:mr-8" id="landing-page-main">
             <motion.div
@@ -165,25 +175,37 @@ export default function LandingPage() {
         </div>
         <div className=" bottom-0 mx-auto mt-[33%] flex min-h-[50%] items-center justify-center sm:mt-[15%] md:mt-[7%]">
           <div className="section-menu relative flex xxxs:mt-12 xxxs:pt-8 xs:mb-12 xs:mt-0 xs:pb-12 xs:pt-0 md:justify-center md:pt-[25%] lg:hidden">
-            <a
-              className="menu-button m-2 p-2 sm:p-3 sm:text-xl"
+            <motion.a
               href="#about-section"
+              className="menu-button m-2 flex items-center gap-2 p-2 sm:p-3 sm:text-xl"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
             >
+              <FaUserAlt className="text-base sm:text-lg" />
               {t("landing.nav.about")}
-            </a>
-            <a
-              className="menu-button m-2 p-2 sm:p-3 sm:text-xl"
+            </motion.a>
+
+            <motion.a
               href="#projects-section"
+              className="menu-button m-2 flex items-center gap-2 p-2 sm:p-3 sm:text-xl"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
             >
+              <FaBriefcase className="text-base sm:text-lg" />
               {t("landing.nav.projects")}
-            </a>
-            <a
-              className="menu-button m-2 p-2 sm:p-3 sm:text-xl"
+            </motion.a>
+
+            <motion.a
               href="#contact-section"
+              className="menu-button m-2 flex items-center gap-2 p-2 sm:p-3 sm:text-xl"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
             >
+              <FaPhoneAlt className="text-base sm:text-lg" />
               {t("landing.nav.contact")}
-            </a>
+            </motion.a>
           </div>
+
           <div className="m-8 hidden lg:block ">
             <p className="about relative m-2 -translate-y-20 p-4 text-left text-xl">
               <Trans
@@ -195,7 +217,7 @@ export default function LandingPage() {
             </p>
           </div>
           <Lottie
-            className="hidden max-w-96 -translate-y-20 hover:cursor-crosshair lg:block lg:min-w-[300px] xl:mr-20 xl:min-w-[350px] "
+            className="hidden max-w-96 -translate-y-20 hover:cursor-crosshair md:block lg:min-w-[300px] xl:mr-20 xl:min-w-[350px] "
             animationData={windowAnimation}
             loop={true}
           />
