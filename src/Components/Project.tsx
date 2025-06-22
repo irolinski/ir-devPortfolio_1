@@ -37,10 +37,8 @@ export default function ProjectPage({
         transition={{ type: "spring", delay: 0.2, duration: 1 }}
         className="hidden items-center justify-center  lg:flex lg:flex-col"
       >
-        <h3 className="text-center text-3xl xxs:text-4xl sm:text-4xl">
-          {t(name)}
-        </h3>
-        <p className=" px-4 py-5 text-center xs:text-xl sm:text-2xl md:text-xl lg:w-[55%] lg:p-2">
+        <h3 className="text-center text-3xl ">{t(name)}</h3>
+        <p className="px-4 py-5 text-center xs:text-xl  md:text-xl lg:w-[55%] lg:p-2">
           {t(description)}
         </p>
       </motion.div>
@@ -52,17 +50,17 @@ export default function ProjectPage({
           duration: 0.5,
           ease: "easeOut",
         }}
-        className="section project lg:flex"
+        className="section project flex w-full flex-row justify-center"
       >
-        <div className="hidden w-1/2 items-center lg:flex">
+        <div className="hidden w-full items-center lg:flex">
           <img className="relative mx-auto w-3/4 md:my-2" src={thumbnail_url} />
         </div>
-        <div className="lg:w-1/2">
-          <h3 className="pb-8 text-center text-3xl xxs:text-4xl sm:mb-2 sm:text-5xl lg:hidden lg:pb-2">
+        <div className="flex flex-col items-center sm:w-3/4 lg:w-1/2">
+          <h3 className="pb-8 text-center text-3xl xxs:text-4xl lg:hidden lg:pb-2">
             {t(name)}
           </h3>
           <img className="px-8 md:my-2 lg:hidden" src={thumbnail_url} />
-          <p className=" px-4 py-5 text-center xs:text-xl sm:text-2xl md:text-3xl lg:hidden lg:p-2">
+          <p className=" px-4 py-5 text-center xs:text-lg lg:hidden lg:p-2">
             {t(description)}
           </p>
           <div className="flex justify-center px-4 pb-5 md:pt-12 lg:p-4">

@@ -55,7 +55,7 @@ $xxl: 1536px; // '2xl' in tailwind
   padding-top: 2em;
 
   @media (max-width: $lg) {
-    min-height: 100vh;
+    min-height: 100vh; // delete this but first put height constraints on individual sections
     overflow: hidden;
   }
 }
@@ -117,8 +117,9 @@ $xxl: 1536px; // '2xl' in tailwind
       transform: translateY(-5px);
     }
   }
+
   .bubble-link {
-    padding: 1.3em;
+    padding: 1.3em 1.6em;
     margin: 1em;
     border: 2px solid $navy;
     border-radius: 60px;
@@ -130,6 +131,11 @@ $xxl: 1536px; // '2xl' in tailwind
       background-color: $cream;
     }
 
+    .link-icon {
+      width: 1.5em;
+      height: 1.5em;
+    }
+
     @media (min-width: $xxl) {
       scale: 1;
     }
@@ -138,25 +144,17 @@ $xxl: 1536px; // '2xl' in tailwind
   .github-link {
     transform: translate(-50px, -80px);
     max-width: 5em;
+    font-weight: 600;
     @media (min-width: $xxl) {
       transform: translate(-100px, -80px);
     }
   }
   .contact-link {
-    .contact-icon {
-      transform: translate(-2px, 2px);
-    }
-
-    transform: translate();
-    max-width: 4.7em;
-    @media (min-width: $xxl) {
-      transform: translate(-4px, -20px);
-    }
+    font-weight: 600;
   }
 
-  .instagram-link {
+  .projects-link {
     transform: translate(80px, -220px);
-    max-width: 4.5em;
     @media (min-width: $xxl) {
       transform: translate(100px, -220px);
     }
