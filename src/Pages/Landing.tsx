@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import Lottie from "lottie-react";
 import { Trans, useTranslation } from "react-i18next";
-import { FaBriefcase, FaGithub, FaPhoneAlt, FaUserAlt } from "react-icons/fa";
+import { FaBriefcase, FaGithub, FaPhoneAlt } from "react-icons/fa";
 import { MdContactPhone } from "react-icons/md";
 import { Tooltip } from "react-tooltip";
 import windowAnimation from "../../public/lotties/window.json";
@@ -43,7 +43,7 @@ const LinkIcons = () => {
   const { t } = useTranslation();
 
   return (
-    <div className="relative z-20 float-right mr-8 flex flex-col pl-20 lg:mr-24 lg:-translate-y-8 xl:mr-52 2xl:ml-16">
+    <div className="relative z-30 float-right mr-8 flex flex-col pl-20 md:translate-y-8 lg:mr-24 lg:-translate-y-8 xl:mr-52 2xl:ml-16">
       <Tooltip id="github-tooltip" />
       <motion.a
         className="bubble-link github-link"
@@ -103,7 +103,7 @@ const LinkIcons = () => {
       </motion.a>
       <Tooltip id="projects-tooltip" />
       <motion.a
-        className="bubble-link projects-link"
+        className="bubble-link projects-link hidden lg:block"
         href="#projects-section"
         animate="initial"
         whileHover="grow"
@@ -133,60 +133,13 @@ const LinkIcons = () => {
   );
 };
 
-const SectionMenuMobile = () => {
-  const { t } = useTranslation();
-
-  return (
-    <div className="section-menu relative mb-16 flex w-full flex-col items-center gap-y-6  xs:mt-0 xs:pb-12 xs:pt-0 lg:hidden">
-      <motion.a
-        href="#about-section"
-        className="menu-button flex items-center gap-2 px-4 py-3 sm:p-4 "
-        whileHover={{ scale: 1.05 }}
-        whileTap={{ scale: 0.95 }}
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-      >
-        <FaUserAlt className="text-base " />
-        {t("landing.nav.about")}
-      </motion.a>
-
-      <motion.a
-        href="#projects-section"
-        className="menu-button mt-4 flex items-center gap-2 px-4 py-3 sm:p-4 "
-        whileHover={{ scale: 1.05 }}
-        whileTap={{ scale: 0.95 }}
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.1, duration: 0.5 }}
-      >
-        <FaBriefcase className="text-base " />
-        {t("landing.nav.projects")}
-      </motion.a>
-
-      <motion.a
-        href="#contact-section"
-        className="menu-button mt-6 flex items-center gap-2 px-4 py-3 sm:p-4 "
-        whileHover={{ scale: 1.05 }}
-        whileTap={{ scale: 0.95 }}
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.2, duration: 0.5 }}
-      >
-        <FaPhoneAlt className="text-base " />
-        {t("landing.nav.contact")}
-      </motion.a>
-    </div>
-  );
-};
-
 export default function LandingPage() {
   const { t } = useTranslation();
   return (
-    <div className="mb-12">
+    <div>
       <ChooseLanguageBar />
       <a
-        className="relative flex flex min-h-[100vh] w-[100vw] flex-row items-center justify-center p-16 md:hidden"
+        className="relative flex min-h-[100vh] w-[100vw] flex-row items-center justify-center p-16 md:hidden"
         href="#landing-page-main"
       >
         <Lottie
@@ -195,12 +148,12 @@ export default function LandingPage() {
           loop={true}
         />
       </a>
-      <div className="landing-page h-auto min-h-[100vh] pt-8 md:justify-center lg:ml-12 lg:px-10 xl:ml-36 2xl:ml-24">
-        <div className="relative w-[100%] px-16 xs:pt-12 lg:mt-32 lg:px-0 ">
-          <div className="hidden lg:block">
+      <div className="landing-page h-auto min-h-[100vh] pt-8 xxs:min-h-[90vh] sm:min-h-[50vh] md:justify-center lg:ml-12 lg:px-10 xl:ml-36 2xl:ml-24">
+        <div className="relative w-[100%] px-16 xs:pt-12 md:mt-6 lg:mt-32 lg:px-0 ">
+          <div className="z-20 hidden md:block xl:-translate-y-12">
             <LinkIcons />
           </div>
-          <div className="lg:mb-12 xl:mr-8" id="landing-page-main">
+          <div className="xl:mb-12 xl:mr-8" id="landing-page-main">
             <motion.div
               initial={{ translateX: -100, opacity: 0 }}
               whileInView={{ translateX: 0, opacity: 1 }}
@@ -212,18 +165,18 @@ export default function LandingPage() {
               </h1>
             </motion.div>
             <Typewriter
-              className="text-sea mt-8 text-3xl font-bold xxs:text-4xl lg:ml-12 lg:max-w-[70vw] lg:-translate-y-16 lg:text-6xl xl:-translate-y-8 xl:text-7xl"
+              className="text-sea mt-8 text-3xl font-bold xxs:text-4xl sm:text-4xl md:max-w-[80vw] lg:ml-12 lg:max-w-[60vw] lg:-translate-y-16 lg:text-7xl
+ xl:-translate-y-8"
               text={t("landing.about")}
             />
-            <h5 className="pt-4 xxs:text-xl sm:text-2xl md:text-3xl lg:hidden">
+            <h5 className="pt-1 xxs:text-xl sm:text-2xl md:pb-6 lg:hidden">
               (frontend, backend, ui)
             </h5>
           </div>
         </div>
-        <div className=" bottom-0 mx-auto mt-[3em] flex min-h-[50%] w-full flex-row  items-center justify-around xs:mt-[15%] md:mt-[7%] lg:mt-0 lg:justify-center">
-          {/* <SectionMenuMobile /> */}
-          <div className="m-8 w-[60%] lg:block lg:-translate-y-8 ">
-            <p className="about relative m-2 -translate-y-20 p-4 text-left text-xl xl:w-[85%] xl:-translate-y-28">
+        <div className=" bottom-0 mx-auto mt-[7%] flex min-h-[50%] w-full flex-row  items-center justify-around md:mt-0 lg:justify-center">
+          <div className="mt-4 w-3/4 px-2 sm:m-8 md:w-[60%] lg:block lg:-translate-y-8 ">
+            <p className="about relative text-left leading-7 sm:m-2 sm:-translate-y-20 sm:p-4 sm:text-xl lg:text-2xl xl:w-[85%] xl:-translate-y-32">
               <Trans
                 i18nKey="landing.bio"
                 components={{
@@ -231,9 +184,23 @@ export default function LandingPage() {
                 }}
               />
             </p>
+            <div className="section-menu relative mt-20 flex w-full -translate-y-4 flex-row items-center justify-center sm:-translate-y-12 md:mt-0 xl:-translate-y-24">
+              <motion.a
+                href="#contact-section"
+                className="menu-button bg-white flex items-center gap-2 px-4 py-6 xs:px-14"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.2, duration: 0.5 }}
+              >
+                <FaPhoneAlt className="text-base " />
+                {t("landing.nav.contact")}
+              </motion.a>
+            </div>
           </div>
           <Lottie
-            className="mt-[8%] hidden w-[80%] max-w-96 -translate-y-20 hover:cursor-crosshair md:block lg:w-full  lg:min-w-[300px] lg:-translate-y-40 xl:mr-20 xl:min-w-[350px] xl:-translate-y-52 "
+            className="mt-[8%] hidden w-[80%] max-w-[320px] -translate-y-20 hover:cursor-crosshair md:mt-36 md:block md:-translate-y-40  lg:w-full lg:min-w-[300px] xl:mr-20 xl:min-w-[350px] xl:-translate-y-64 "
             animationData={windowAnimation}
             loop={true}
           />

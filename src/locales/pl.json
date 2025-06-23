@@ -2,18 +2,18 @@
   "landing": {
     "choose_language": "Wybierz język:",
     "tooltips": {
-      "github": "Idź do repozytorium",
+      "github": "Zobacz mojego GitHuba",
       "contact": "Skontaktuj się ze mną",
       "projects": "Zobacz moje projekty"
     },
     "nav": {
       "about": "O mnie",
       "projects": "Projekty",
-      "contact": "Kontakt"
+      "contact": "Skontaktuj się ze mną"
     },
     "greeting": "Cześć! Nazywam się Ignacy.",
     "about": "Tworzę aplikacje dopasowane do potrzeb każdego klienta.",
-    "bio": "Jako <b>freelancer i full-stack developer</b>, specjalizuję się w tworzeniu aplikacji webowych. Swobodnie poruszam się zarówno po stronie serwera i baz danych z <b>Node.js</b>, jak i po stronie front-endu, implementując intuicyjne interfejsy w <b>ReactJs</b>. Współpraca z klientami nauczyła mnie przekuwać ich wizje w rzeczywistość – zarówno kodem, jak i poprzez spersonalizowany <b>design UI</b>."
+    "bio": "Jako <b>full-stack developer</b>, skupiam się na tworzeniu przejrzystych i intuicyjnych aplikacji – zarówno od strony frontendu, jak i backendu. Łączę <b>techniczne</b> podejście z wyczuciem <b>designu</b>, współpracując z klientami, by <b>przekuwać pomysły w niezawodne, dopracowane produkty cyfrowe</b>."
   },
   "aboutMe": {
     "header": "O mnie.",

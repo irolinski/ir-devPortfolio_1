@@ -8,13 +8,13 @@ export default function ContactPage() {
 
   return (
     <div
-      className="contact section bg-white flex justify-center lg:block"
+      className="contact section bg-white flex min-h-[100vh] justify-center sm:block sm:min-h-0"
       id="contact-section"
     >
       <h2 className="section-header text-center lg:hidden">
         {t("contactMe.header")}
       </h2>
-      <div className="width-[100vw] absolute flex min-h-[90%] flex-col items-center justify-center xxs:min-h-[80%] xxs:pt-[15vh] md:pt-[7.5vh] lg:relative lg:flex-row">
+      <div className="width-[100vw] absolute flex min-h-[90%] flex-col items-center justify-center xxs:min-h-[80%] xxs:pt-[15vh] sm:relative sm:flex-row sm:justify-around md:pt-[7.5vh] lg:justify-center">
         <motion.div
           initial={{ translateX: 100, opacity: 0 }}
           whileInView={{ translateX: 0, opacity: 1 }}
@@ -25,7 +25,7 @@ export default function ContactPage() {
           <FaPhoneAlt className="icon mx-auto mb-4 h-auto w-12 p-2 xxs:w-14 sm:w-16 md:mb-5 lg:w-12" />
           <a
             href="tel:+48602484620"
-            className="text-center text-xl xxs:text-2xl sm:text-3xl md:text-4xl lg:px-4 lg:py-2 lg:text-2xl"
+            className="text-center text-xl xxs:text-2xl lg:px-4 lg:py-2 lg:text-2xl"
           >
             +48 602 484 620
           </a>
@@ -39,7 +39,7 @@ export default function ContactPage() {
         >
           <IoIosMail className="icon mx-auto mb-4 h-auto w-12 p-2 xxs:w-14 sm:w-16 md:mb-5 lg:w-12" />
           <a
-            className="text-center text-xl xxs:text-2xl sm:text-3xl md:text-4xl lg:px-4 lg:py-2 lg:text-2xl"
+            className="text-center text-xl xxs:text-2xl lg:px-4 lg:py-2 lg:text-2xl"
             href="mailto:ignacy.rolinski@gmail.com"
           >
             ignacy.rolinski@gmail.com

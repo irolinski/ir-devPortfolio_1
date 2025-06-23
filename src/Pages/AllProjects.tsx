@@ -15,10 +15,7 @@ export default function AllProjects() {
   const { t } = useTranslation();
 
   return (
-    <div
-      className="projects-wrapper section -mt-48 sm:-mt-36 lg:mt-0"
-      id="projects-section"
-    >
+    <div className="projects-wrapper section lg:mt-0" id="projects-section">
       <h2 className="section-header relative pt-12 text-center">
         {t("recentProjects.header")}
       </h2>

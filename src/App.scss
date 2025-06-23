@@ -99,7 +99,7 @@ $xxl: 1536px; // '2xl' in tailwind
   .menu-button {
     font-weight: 500;
     border: 2px groove $navy;
-    padding: 1.2em;
+    // padding: 1.2em;
     border-radius: 60px;
     background-color: #f9f7f74d;
     transition:
@@ -118,7 +118,7 @@ $xxl: 1536px; // '2xl' in tailwind
     border: 2px solid $navy;
     border-radius: 60px;
     scale: 0.9;
-    z-index: 20 !important;
+    z-index: 100 !important;
     transition: background-color 0.1s;
     &:hover,
     &:focus {
