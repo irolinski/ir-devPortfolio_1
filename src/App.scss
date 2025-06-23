@@ -184,7 +184,7 @@ $xxl: 1536px; // '2xl' in tailwind
 
 .project {
   @media (min-width: $lg) {
-    scale: 0.7;
+    padding: 0em 5em;
 
     img {
       box-shadow:
@@ -208,12 +208,8 @@ $xxl: 1536px; // '2xl' in tailwind
     }
 
     svg {
-      width: 2em;
+      width: 2.5em;
       height: auto;
-
-      @media (min-width: $md) {
-        width: 3em;
-      }
     }
   }
 }
@@ -300,7 +296,7 @@ $xxl: 1536px; // '2xl' in tailwind
 
     .answer-content {
       padding: 1rem 0;
-      font-size: 1rempx;
+      font-size: 14px;
       font-style: italic;
 
       .answer-list {

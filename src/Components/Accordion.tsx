@@ -24,7 +24,7 @@ const AccordionItem = ({
         className={`question-container ${isOpen ? "active" : ""}`}
         onClick={onClick}
       >
-        <p className="question-content sm:text-2xl md:text-3xl">
+        <p className="question-content sm:text-2xl md:text-xl ">
           {t(question)}
         </p>
         <IoIosArrowDown className={`arrow ${isOpen ? "active" : ""}`} />
