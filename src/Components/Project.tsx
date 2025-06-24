@@ -29,7 +29,7 @@ export default function ProjectPage({
   const { t } = useTranslation();
 
   return (
-    <div className="project-main section flex flex-col items-center justify-center  px-2 pt-12 lg:px-32">
+    <div className="project-main section flex flex-col items-center justify-center px-2 pt-12 lg:px-32">
       <motion.div
         className="hidden w-full items-center justify-center md:flex md:flex-col"
         initial={{ translateX: -100, opacity: 0 }}
@@ -37,8 +37,8 @@ export default function ProjectPage({
         viewport={{ once: true, amount: 0.5 }}
         transition={{ type: "spring", delay: 0.2, duration: 1 }}
       >
-        <div className=" flex w-3/4 flex-col items-center justify-center">
-          <h3 className="text-center text-3xl ">{t(name)}</h3>
+        <div className="flex w-3/4 flex-col items-center justify-center">
+          <h3 className="text-center text-3xl">{t(name)}</h3>
           <p className="font-italic px-4 text-center xs:text-xl md:w-3/4 md:p-2 md:text-xl">
             {t(description)}
           </p>
@@ -46,7 +46,7 @@ export default function ProjectPage({
       </motion.div>
       <motion.div
         className="flex w-full flex-col items-center justify-center pt-4"
-        initial={{ translateX: -100, opacity: 0.2 }}
+        initial={{ translateX: -100, opacity: 0.01 }}
         whileInView={{ translateX: 0, opacity: 1 }}
         viewport={{ once: true, amount: 0.5 }}
         transition={{
