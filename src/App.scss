@@ -11,6 +11,8 @@ $gradient2: rgba($sea, 0.25);
 $gradient3: rgba($sea, 0.35);
 $gradient4: rgba($sky, 0.15);
 
+$max-width-value: 1400px;
+
 .text-cream {
   color: $cream;
 }
@@ -85,6 +87,10 @@ $xxl: 1536px; // '2xl' in tailwind
 }
 
 //landing page
+
+.landing-screen-wrapper {
+  max-width: $max-width-value;
+}
 
 .landing-page {
   h5 {
@@ -169,6 +175,7 @@ $xxl: 1536px; // '2xl' in tailwind
 }
 
 .project {
+  max-width: $max-width-value;
   @media (min-width: $lg) {
     padding: 0em 5em;
 
@@ -203,6 +210,7 @@ $xxl: 1536px; // '2xl' in tailwind
 }
 
 .project-main {
+  width: 100vw;
   &:nth-child(2) {
     background: linear-gradient($gradient1, $gradient2);
   }
