@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import Lottie from "lottie-react";
 import { Trans, useTranslation } from "react-i18next";
-import layingAnimation from "../../public/lotties/looking.json";
+import layingAnimation from "../assets/lotties/looking.json";
 
 export default function AboutPage() {
   const { t } = useTranslation();

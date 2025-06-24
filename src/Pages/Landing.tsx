@@ -5,7 +5,8 @@ import { Trans, useTranslation } from "react-i18next";
 import { FaBriefcase, FaGithub, FaPhoneAlt } from "react-icons/fa";
 import { MdContactPhone } from "react-icons/md";
 import { Tooltip } from "react-tooltip";
-import windowAnimation from "../../public/lotties/window.json";
+import LogoSvg from "../assets/icons/logo-white.svg";
+import windowAnimation from "../assets/lotties/window.json";
 // @ts-ignore
 import ParticlesComponent from "../Components/Particles_Stars.jsx";
 // @ts-ignore
@@ -18,7 +19,7 @@ const Navbar = () => {
     <div className="navbar absolute top-8 z-20 flex h-12 w-full max-w-7xl flex-row items-start justify-center  px-8 sm:relative lg:absolute lg:top-4 lg:justify-between">
       <div className=" hidden flex-col items-center justify-center lg:flex">
         <img
-          src="/src/assets/icons/logo-white.svg"
+          src={LogoSvg}
           width={40}
           className="opacity-50 hover:opacity-100"
         />
