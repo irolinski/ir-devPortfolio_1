@@ -11,10 +11,17 @@ import ParticlesComponent from "../Components/Particles_Stars.jsx";
 import { Typewriter } from "../Components/Typewriter.jsx";
 import i18n from "../i18n.js";
 
-const ChooseLanguageBar = () => {
+const Navbar = () => {
   const { t } = useTranslation();
   return (
-    <div className="choose-language-bar absolute top-8 z-20 flex h-12 w-full flex-col items-center justify-center px-8 sm:relative lg:absolute lg:top-4 lg:items-end">
+    <div className="navbar absolute top-8 z-20 flex h-12 w-full flex-row items-start justify-center  px-8 sm:relative lg:absolute lg:top-4 lg:justify-between">
+      <div className=" hidden flex-col items-center justify-center lg:flex">
+        <img
+          src="/src/assets/icons/logo-white.svg"
+          width={40}
+          className="opacity-50 hover:opacity-100"
+        />
+      </div>
       <div className="flex flex-col items-center justify-center">
         <span>{t("landing.choose_language")}</span>
         <div className="flex w-24 flex-row justify-between ">
@@ -137,7 +144,7 @@ export default function LandingPage() {
   const { t } = useTranslation();
   return (
     <div>
-      <ChooseLanguageBar />
+      <Navbar />
       <a
         className="relative flex min-h-[100vh] w-[100vw] flex-row items-center justify-center p-16 md:hidden"
         href="#landing-page-main"
