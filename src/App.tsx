@@ -1,5 +1,5 @@
 import "./App.scss";
-import React from "react";
+import React, { useEffect } from "react";
 // @ts-ignore
 import ParticelsComponent from "./Components/Particles_Stars.jsx";
 import AllProjects from "./Pages/AllProjects.tsx";
@@ -7,6 +7,9 @@ import ContactPage from "./Pages/Contact.js";
 import LandingPage from "./Pages/Landing.js";
 
 export default function App() {
+  useEffect(() => {
+    fetch("/api/hello");
+  }, []);
   return (
     <React.Fragment>
       <ParticelsComponent id="particles" />
