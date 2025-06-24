@@ -39,7 +39,7 @@ export default function ProjectPage({
       >
         <div className=" flex w-3/4 flex-col items-center justify-center">
           <h3 className="text-center text-3xl ">{t(name)}</h3>
-          <p className="px-4 text-center xs:text-xl md:w-3/4 md:p-2 md:text-xl">
+          <p className="font-italic px-4 text-center xs:text-xl md:w-3/4 md:p-2 md:text-xl">
             {t(description)}
           </p>
         </div>

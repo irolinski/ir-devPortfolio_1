@@ -1,0 +1,39 @@
+/* tailwind init */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* fonts */
+
+@font-face {
+  font-family: "roboto";
+  src: url("./assets/fonts/Roboto-VariableFont_wdth,wght.ttf");
+}
+
+@font-face {
+  font-family: "roboto-italic";
+  src: url("./assets/fonts/Roboto-Italic-VariableFont_wdth\,wght.ttf");
+}
+
+:root {
+  font-family: roboto, system-ui, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+.font-italic {
+  font-family: roboto-italic, sans-serif;
+}

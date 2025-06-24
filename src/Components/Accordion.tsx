@@ -40,7 +40,7 @@ const AccordionItem = ({
         }
       >
         <p className="answer-content text-md whitespace-pre-wrap sm:text-xl">
-          <ul className="answer-list">
+          <ul className="answer-list font-italic">
             <Trans
               i18nKey={answer}
               components={{

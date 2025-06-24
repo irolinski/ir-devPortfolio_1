@@ -1,12 +1,8 @@
-// tailwind init
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 // color variables & classes
 
 $cream: #f9f7f7;
 $sky: #dbe2ef;
+$dark-grey: #f9f7f751;
 $sea: #3f72af;
 $navy: #17222f;
 
@@ -83,7 +79,7 @@ $xxl: 1536px; // '2xl' in tailwind
   }
 }
 
-.choose-language-bar * {
+.navbar * {
   color: #ffffff;
   z-index: 20;
 }
@@ -101,13 +97,13 @@ $xxl: 1536px; // '2xl' in tailwind
     border: 2px groove $navy;
     // padding: 1.2em;
     border-radius: 60px;
-    background-color: #f9f7f74d;
+    background-color: $dark-grey;
     transition:
       background-color 0.2s,
       transform 1s;
     &:hover,
     &:focus {
-      background-color: #f9f7f7;
+      background-color: $cream;
       transform: translateY(-5px);
     }
   }
@@ -201,9 +197,11 @@ $xxl: 1536px; // '2xl' in tailwind
     .project-icon {
       padding: 1em;
       border-radius: 60px;
+      transition: background-color 0.2s ease-in-out;
+      background-color: rgba($dark-grey, 0);
       &:hover,
       &:focus {
-        background-color: #f9f7f751;
+        background-color: $dark-grey;
       }
     }
 
