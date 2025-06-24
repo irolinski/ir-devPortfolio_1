@@ -132,22 +132,12 @@ $xxl: 1536px; // '2xl' in tailwind
   }
 
   .github-link {
-    transform: translate(-50px, -80px);
     max-width: 5em;
-    font-weight: 600;
-    @media (min-width: $xxl) {
-      transform: translate(-100px, -80px);
-    }
-  }
-  .contact-link {
     font-weight: 600;
   }
 
-  .projects-link {
-    transform: translate(80px, -220px);
-    @media (min-width: $xxl) {
-      transform: translate(100px, -220px);
-    }
+  .contact-link {
+    font-weight: 600;
   }
 }
 

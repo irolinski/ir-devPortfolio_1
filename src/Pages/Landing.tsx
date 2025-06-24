@@ -160,7 +160,10 @@ export default function LandingPage() {
           <div className="z-20 hidden md:block xl:-translate-y-12">
             <LinkIcons />
           </div>
-          <div className="xl:mb-12 xl:mr-8" id="landing-page-main">
+          <div
+            className="pointer-events-none xl:mb-12 xl:mr-8"
+            id="landing-page-main"
+          >
             <motion.div
               initial={{ translateX: -100, opacity: 0 }}
               whileInView={{ translateX: 0, opacity: 1 }}
@@ -172,7 +175,7 @@ export default function LandingPage() {
               </h1>
             </motion.div>
             <Typewriter
-              className="text-sea mt-8 text-3xl font-bold xxs:text-4xl sm:text-4xl md:max-w-[80vw] lg:ml-12 lg:max-w-[60vw] lg:-translate-y-16 lg:text-7xl
+              className="text-sea pointer-events-none mt-8 text-3xl font-bold xxs:text-4xl sm:text-4xl md:max-w-[80vw] lg:ml-12 lg:max-w-[60vw] lg:-translate-y-16 lg:text-7xl
  xl:-translate-y-8"
               text={t("landing.about")}
             />

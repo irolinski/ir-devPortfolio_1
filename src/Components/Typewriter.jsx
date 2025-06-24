@@ -12,7 +12,7 @@ export const letterVariants = {
 };
 
 export const Typewriter = ({ text, ...rest }) => (
-  <motion.p
+  <motion.div
     key={text}
     variants={sentenceVariants}
     initial="hidden"
@@ -28,5 +28,5 @@ export const Typewriter = ({ text, ...rest }) => (
         {char}
       </motion.span>
     ))}
-  </motion.p>
+  </motion.div>
 );
