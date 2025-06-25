@@ -5,6 +5,7 @@ $sky: #dbe2ef;
 $dark-grey: #f9f7f751;
 $sea: #3f72af;
 $navy: #17222f;
+$red: #e74c3c;
 
 $gradient1: rgba($sky, 0.75);
 $gradient2: rgba($sea, 0.25);
@@ -242,6 +243,78 @@ $xxl: 1536px; // '2xl' in tailwind
   .icon {
     border: 2px solid black;
     border-radius: 40px;
+  }
+
+  .contact-form {
+    padding: 1em;
+    border: 0.5px groove $navy;
+    border-radius: 2rem;
+    background-color: $dark-grey;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    transition: background-color 0.3s ease;
+
+    label {
+      padding: 0 0.75em;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 1rem 1.2rem;
+      border-radius: 50px;
+      border: 2px solid $navy;
+      background-color: white;
+      color: $navy;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+
+      &:focus {
+        outline: none;
+        border-color: $sea;
+        background-color: $cream;
+      }
+
+      &.input-error {
+        border-color: $red;
+        background-color: #ffe6e6;
+      }
+    }
+
+    textarea {
+      border-radius: 30px;
+      resize: none;
+      min-height: 10rem;
+    }
+
+    .form-button-row {
+      display: flex;
+      justify-content: center;
+    }
+
+    .contact-form-button {
+      font-weight: 500;
+      border: 2px groove $navy;
+      border-radius: 30px;
+      background-color: rgba(249, 247, 247, 0.3176470588);
+      color: $navy;
+      transition:
+        background-color 0.2s ease,
+        transform 0.2s ease;
+
+      &:hover,
+      &:focus {
+        background-color: $sea;
+        color: $cream;
+        transform: translateY(-5px);
+      }
+
+      &.disabled {
+        opacity: 0.6;
+        pointer-events: none;
+      }
+    }
   }
 }
 
