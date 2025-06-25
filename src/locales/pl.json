@@ -91,6 +91,16 @@
     }
   },
   "contactMe": {
-    "header": "Kontakt."
+    "header": "Kontakt.",
+    "description_1": "Wypełnij poniższy formularz, a wrócę do Ciebie z ofertą...",
+    "description_2": "...lub skontaktuj się ze mną bezpośrednio",
+    "nameLabel": "Twoje imię:",
+    "namePlaceholder": "Twoje imię i nazwisko",
+    "emailLabel": "Twój e-mail:",
+    "emailPlaceholder": "Twój adres e-mail",
+    "messageLabel": "Twoja wiadomość:",
+    "messagePlaceholder": "Opisz, czego potrzebujesz",
+    "send": "Wyślij",
+    "sent": "Wysłano"
   }
 }

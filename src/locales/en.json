@@ -89,6 +89,16 @@
     }
   },
   "contactMe": {
-    "header": "Contact me."
+    "header": "Contact me.",
+    "description_1": "Fill out the form below and I'll get back to you with an offer...",
+    "description_2": "...or contact me directly",
+    "nameLabel": "Your name:",
+    "namePlaceholder": "Your name and surname",
+    "emailLabel": "Your e-mail:",
+    "emailPlaceholder": "Your e-mail adress",
+    "messageLabel": "Your message:",
+    "messagePlaceholder": "Tell me what do you need",
+    "send": "Send",
+    "sent": "Sent"
   }
 }
