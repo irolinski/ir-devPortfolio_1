@@ -66,37 +66,33 @@ export default function ContactScreen() {
 
     if (!validateContactForm()) {
       if (errors.name) {
-        alert(
-          "Name cannot contain special characters and has to be of length between 2 and 60 characters.",
-        );
+        alert(t("contactMe.nameAlert"));
       }
       if (errors.email) {
-        alert("A proper e-mail adress must be provided.");
+        alert(t("contactMe.emailAlert"));
       }
       if (errors.message) {
-        alert(
-          "Message cannot contain special characters and has to be of length between 50 and 1000 characters.",
-        );
+        alert(t("contactMe.messageAlert"));
       }
       return;
     }
 
-    // try {
-    //   const res = await fetch("/api/sendmail", {
-    //     method: "POST",
-    //     headers: { "Content-Type": "application/json" },
-    //     body: JSON.stringify(contactForm),
-    //   });
+    try {
+      const res = await fetch("/api/send_mail", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(contactForm),
+      });
 
-    //   const data = await res.json();
-    //   if (!res.ok) throw new Error(data.error || "Something went wrong");
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.error || "Something went wrong");
 
-    //   alert("Email sent successfully!");
-    //   setDisableSendButton(true);
-    // } catch (err) {
-    //   console.error(err);
-    //   alert("Failed to send email.");
-    // }
+      alert(t("contactMe.success"));
+      setDisableSendButton(true);
+    } catch (err) {
+      console.error(err);
+      alert(t("contactMe.failure"));
+    }
   };
 
   return (
@@ -215,12 +211,19 @@ export default function ContactScreen() {
                   <span>
                     {" "}
                     ({MESSAGE_LENGTH.min - contactForm.message.length}{" "}
-                    characters required)
+                    {t("contactMe.characters_required")})
                   </span>
                 ) : (
                   <span>
-                    <span>{contactForm.message.length}</span>/
-                    <span>{MESSAGE_LENGTH.max}</span>
+                    <span>
+                      {"("}
+                      {contactForm.message.length}
+                    </span>
+                    /
+                    <span>
+                      {MESSAGE_LENGTH.max}
+                      {")"}
+                    </span>
                   </span>
                 )}
               </span>

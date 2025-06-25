@@ -96,11 +96,17 @@
     "description_2": "...lub skontaktuj się ze mną bezpośrednio",
     "nameLabel": "Twoje imię:",
     "namePlaceholder": "Twoje imię i nazwisko",
+    "nameAlert": "Name cannot contain special characters and has to be of length between 2 and 60 characters.",
     "emailLabel": "Twój e-mail:",
     "emailPlaceholder": "Twój adres e-mail",
+    "emailAlert": "Proszę podać poprawny adres e-mail.",
     "messageLabel": "Twoja wiadomość:",
     "messagePlaceholder": "Opisz, czego potrzebujesz",
+    "messageAlert": "Wiadomość nie może zawierać znaków specjalnych i musi mieścić się w zakreseie długości między 50 a 1000 znaków.",
+    "characters_required": "znaków wymagane",
     "send": "Wyślij",
-    "sent": "Wysłano"
+    "sent": "Wysłano",
+    "success": "Email wysłano pomyślnie!",
+    "failure": "Błąd połączenia. Nie udało się nadać wiadomości. \n\nProszę, skontaktuj się ze mną nadając mail z własnej skrzynki.\n\nDziękuję."
   }
 }

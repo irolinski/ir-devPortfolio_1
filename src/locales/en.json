@@ -94,11 +94,17 @@
     "description_2": "...or contact me directly",
     "nameLabel": "Your name:",
     "namePlaceholder": "Your name and surname",
+    "nameAlert": "Name cannot contain special characters and has to be of length between 2 and 60 characters.",
     "emailLabel": "Your e-mail:",
     "emailPlaceholder": "Your e-mail adress",
+    "emailAlert": "A proper e-mail adress must be provided.",
     "messageLabel": "Your message:",
     "messagePlaceholder": "Tell me what do you need",
+    "messageAlert": "Message cannot contain special characters and has to be of length between 50 and 1000 characters.",
+    "characters_required": "characters required",
     "send": "Send",
-    "sent": "Sent"
+    "sent": "Sent",
+    "success": "Email sent successfully!",
+    "failure": "Connection error. The message could not be sent.\n\nPlease contact me by sending an email from your own mailbox.\n\nThank you."
   }
 }
