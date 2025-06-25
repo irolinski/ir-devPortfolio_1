@@ -255,6 +255,10 @@ $xxl: 1536px; // '2xl' in tailwind
     flex-direction: column;
     transition: background-color 0.3s ease;
 
+    label {
+      padding: 0 0.75em;
+    }
+
     input,
     textarea {
       width: 100%;
@@ -272,7 +276,7 @@ $xxl: 1536px; // '2xl' in tailwind
         background-color: $cream;
       }
 
-      &.invalid {
+      &.input-error {
         border-color: $red;
         background-color: #ffe6e6;
       }
@@ -301,7 +305,8 @@ $xxl: 1536px; // '2xl' in tailwind
 
       &:hover,
       &:focus {
-        background-color: $cream;
+        background-color: $sea;
+        color: $cream;
         transform: translateY(-5px);
       }
 

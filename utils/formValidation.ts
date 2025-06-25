@@ -1,36 +1,31 @@
+// Validates names: letters (any language), dashes, spaces — must contain at least one letter
 export const validateNameInput = (name: string): boolean => {
-  const regex = /^[\p{L}\-\s]+$/u;
-  return regex.test(name.trim()) || !name;
+  const regex = /^(?=.*\p{L})[\p{L}\-\s]+$/u;
+  return regex.test(name.trim());
 };
 
 export const validateEmailInput = (email: string): boolean => {
-  const regex = /^[A-Za-z0-9.@\- ]+$/;
-  return regex.test(email.trim()) || !email;
-};
-
-export const validateEmailStructure = (email: string): boolean => {
-  const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  const regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
   return regex.test(email.trim());
 };
 
+// Validates phone numbers: digits, optional `+`, spaces, dashes, parentheses
 export const validatePhoneInput = (phone: string): boolean => {
-  const regex = /^[\d+\-\s()]+$/;
-  return regex.test(phone.trim()) || !phone;
+  const regex = /^\+?[0-9\s\-().]{7,20}$/;
+  return regex.test(phone.trim());
 };
 
+// Validates messages: letters, numbers, common punctuation — must include non-whitespace
 export const validateMessageInput = (message: string): boolean => {
   const regex = /^[\p{L}0-9 @\-_\.!?;:,%*'"\(\)+=\/<>\s]+$/u;
-  return regex.test(message.trim()) || !message;
+  return regex.test(message.trim()) && message.trim().length > 0;
 };
 
+// Validates that a string falls within the desired length range
 export const validateStringLength = (
-  string: string,
-  lengthMin: number,
-  lengthMax: number,
-) => {
-  if (string.length > lengthMax || string.length < lengthMin) {
-    return false;
-  } else {
-    return true;
-  }
+  str: string,
+  min: number,
+  max: number,
+): boolean => {
+  return str.length >= min && str.length <= max;
 };

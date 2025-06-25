@@ -13,7 +13,7 @@ type InputLength = { min: number; max: number };
 
 const NAME_LENGTH: InputLength = { min: 2, max: 60 };
 const EMAIL_LENGTH: InputLength = { min: 5, max: 300 };
-const MESSAGE_LENGTH: InputLength = { min: 100, max: 1000 };
+const MESSAGE_LENGTH: InputLength = { min: 50, max: 1000 };
 
 export default function ContactScreen() {
   const { t } = useTranslation();
@@ -23,13 +23,11 @@ export default function ContactScreen() {
     email: "",
     message: "",
   });
-
   const [errors, setErrors] = useState({
     name: false,
     email: false,
     message: false,
   });
-
   const [disableSendButton, setDisableSendButton] = useState(false);
 
   const validateContactForm = (): boolean => {
@@ -65,24 +63,40 @@ export default function ContactScreen() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!validateContactForm()) return;
 
-    try {
-      const res = await fetch("/api/sendmail", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(contactForm),
-      });
-
-      const data = await res.json();
-      if (!res.ok) throw new Error(data.error || "Something went wrong");
-
-      alert("Email sent successfully!");
-      setDisableSendButton(true);
-    } catch (err) {
-      console.error(err);
-      alert("Failed to send email.");
+    if (!validateContactForm()) {
+      if (errors.name) {
+        alert(
+          "Name cannot contain special characters and has to be of length between 2 and 60 characters.",
+        );
+      }
+      if (errors.email) {
+        alert("A proper e-mail adress must be provided.");
+      }
+      if (errors.message) {
+        alert(
+          "Message cannot contain special characters and has to be of length between 50 and 1000 characters.",
+        );
+      }
+      return;
     }
+
+    // try {
+    //   const res = await fetch("/api/sendmail", {
+    //     method: "POST",
+    //     headers: { "Content-Type": "application/json" },
+    //     body: JSON.stringify(contactForm),
+    //   });
+
+    //   const data = await res.json();
+    //   if (!res.ok) throw new Error(data.error || "Something went wrong");
+
+    //   alert("Email sent successfully!");
+    //   setDisableSendButton(true);
+    // } catch (err) {
+    //   console.error(err);
+    //   alert("Failed to send email.");
+    // }
   };
 
   return (
@@ -102,15 +116,15 @@ export default function ContactScreen() {
       </div>
       <form
         onSubmit={handleSubmit}
-        className="contact-form flex w-full max-w-2xl items-center justify-center space-y-8 xs:max-w-[400px] md:max-w-[660px]"
+        className="contact-form flex w-full max-w-2xl items-center justify-center xs:max-w-[400px] md:max-w-[660px]"
       >
-        <div className="flex w-full flex-col items-center justify-center gap-y-2 space-x-2 md:flex-row">
+        <div className="mb-4 flex w-full flex-col items-center justify-center gap-y-2 space-x-2 md:flex-row">
           <div className="flex w-full flex-col gap-y-2 ">
             <label className=" font-bold" htmlFor="name-input">
               {t("contactMe.nameLabel")}
             </label>
             <input
-              className={`input input-bordered w-full ${errors.name ? "border-red-500" : ""}`}
+              className={`input input-bordered w-full ${errors.name ? "input-error" : ""}`}
               type="text"
               name="name"
               id="name-input"
@@ -160,16 +174,16 @@ export default function ContactScreen() {
                     ),
                 }))
               }
-              className={`input input-bordered w-full ${errors.email ? "border-red-500" : ""}`}
+              className={`input input-bordered w-full ${errors.email ? "input-error" : ""}`}
             />
           </div>
         </div>
-        <div className="flex w-full flex-col gap-y-1">
+        <div className="mb-2 flex w-full flex-col gap-y-1">
           <label className="font-bold" htmlFor="message-input">
             {t("contactMe.messageLabel")}
           </label>
           <textarea
-            className={`textarea textarea-bordered w-full ${errors.message ? "border-red-500" : ""}`}
+            className={`textarea textarea-bordered w-full ${errors.message ? "input-error" : ""}`}
             name="message"
             id="message-input"
             placeholder={t("contactMe.messagePlaceholder")}
@@ -193,12 +207,37 @@ export default function ContactScreen() {
             }
           />
         </div>
+        <div className="flex w-full items-center justify-start px-4">
+          <span className="h-4">
+            {contactForm.message.length >= 1 && (
+              <span>
+                {contactForm.message.length < MESSAGE_LENGTH.min ? (
+                  <span>
+                    {" "}
+                    ({MESSAGE_LENGTH.min - contactForm.message.length}{" "}
+                    characters required)
+                  </span>
+                ) : (
+                  <span>
+                    <span>{contactForm.message.length}</span>/
+                    <span>{MESSAGE_LENGTH.max}</span>
+                  </span>
+                )}
+              </span>
+            )}
+          </span>
+        </div>
         <div className="flex w-full flex-row justify-end px-4">
           <button
+            onClick={handleSubmit}
             type="submit"
-            disabled={disableSendButton}
+            disabled={
+              errors.email || errors.message || errors.name || disableSendButton
+            }
             className={`contact-form-button btn btn-primary text-white rounded-md px-8 py-2 text-lg ${
-              disableSendButton ? "cursor-not-allowed opacity-50" : ""
+              errors.email || errors.message || errors.name || disableSendButton
+                ? "cursor-not-allowed opacity-50"
+                : ""
             }`}
           >
             {disableSendButton ? t("contactMe.sent") : t("contactMe.send")}
@@ -253,36 +292,6 @@ export default function ContactScreen() {
           </motion.div>
         </div>
       </div>
-      {/* <div className=" flex min-h-[80vh] flex-col justify-center gap-10 sm:flex-row">
-        <motion.div
-          initial={{ x: 100, opacity: 0 }}
-          whileInView={{ x: 0, opacity: 1 }}
-          transition={{ type: "spring", duration: 0.8 }}
-          className="flex flex-col items-center space-x-4 space-y-8"
-        >
-          <FaPhoneAlt className="text-primary text-3xl" />
-          <a
-            href="tel:+48602484620"
-            className="text-gray-700 hover:text-primary text-xl font-medium"
-          >
-            +48 602 484 620
-          </a>
-        </motion.div>
-        <motion.div
-          initial={{ x: 100, opacity: 0 }}
-          whileInView={{ x: 0, opacity: 1 }}
-          transition={{ type: "spring", duration: 0.6 }}
-          className="flex flex-col items-center space-x-4 space-y-8"
-        >
-          <FaEnvelope className="text-primary text-3xl" />
-          <a
-            href="mailto:ignacy.rolinski@gmail.com"
-            className="text-gray-700 hover:text-primary text-xl font-medium"
-          >
-            ignacy.rolinski@gmail.com
-          </a>
-        </motion.div>
-      </div> */}
     </div>
   );
 }
